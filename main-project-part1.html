@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="CSS/project-style.css">
+
+</head>
+<body>
+
+<!--start header-->
+<div id="header" style="background-image:url(image/bg.jpg)" class="head">
+<h1>IOT Based Smart Meter</h1>
+<span style="cursor:pointer;" class="menu" onclick="openNav()"> &#9776; menu</span>
+</div>  <!--end header-->
+
+<!--start navbar-->
+<div class="navbar" id="myNav">
+<a href="index.html" class="btn active">Home <i class="fas fa-home"></i></a>
+<a href="javascript:void(0)" class="btn">Education <i class="fas fa-graduation-cap"></i></a>
+<div class="dropdown btn">
+<button class="dropbtn">Project
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="main-project-part1.html">Main-Project</a>
+<a href="mini-project.html">Mini-Project</a>
+<a href="index.html">IT-Project</a>
+</div>
+</div>
+<a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
+
+<a href="signup.html">Sign-Up <i class="fas fa-user-plus"></i>
+</a>
+<a href="login.html">Login <i class="fas fa-sign-in-alt"></i>
+</a>
+<span style="cursor:pointer;color:white;" class="menu2" onclick="openNav()"> &#9776; menu</span>
+</div>  <!--end navbar-->
+
+<!--start sidenav-->
+<div id="myNav1" class="overlay">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#intro">Introduction</a>
+    <a href="#literature-survey">Literature Survey</a>
+    <a href="main-project-part2.html#problem-statement">Problem Statement</a>
+    <a href="main-project-part2.html#Methodology">Methodology</a>
+    <a href="main-project-part3.html#circuit-diagram">Circuit Diagram</a>
+	  <a href="main-project-part3.html#hardware-software">Hardware & Software Interface</a>
+	  <a href="main-project-part3.html#cost">Costing</a>
+	  <a href="main-project-part3.html#result">Result</a>
+	  <a href="main-project-part3.html#conclusion">Conclusion</a>
+	  <a href="main-project-part3.html#future">Future Scope</a>
+	  <a href="main-project-part3.html#refer">Reference</a>
+  </div>
+</div>  <!--end sidenav-->
+
+<!--start main-container-->
+<div class="main-container">
+
+<!--start content box 1-->
+<div class="content">
+<h2 id="intro">1. Introduction</h2>
+<hr>
+<br>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="image/img1.jpg" style="width:100%">
+  <div class="text">Client-Side</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="image/img2.jpg" style="width:100%">
+  <div class="text">Server-Side</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="image/img3.jpg" style="width:100%">
+  <div class="text">Theft-Detection</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="image/img4.jpg" style="width:100%">
+  <div class="text">Number of Units used</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+<br>
+<p class="part1-para">Electricity is the driving force behind the development of any country. With the rapid increase in residential, commercial, and industrial consumers of electricity throughout the world, it has now become imperative for utilities companies to devise better, non-intrusive, environmentally-safe techniques of gauging utilities’ consumption so that correct bills can be generated and invoiced.<br><br>
+
+In the Internet of Things (IOT) model, many of the living and non-living things that encompass us will be on the internet in one form or another. Driven by the popularity of gadgets empowered by wire-less technological innovation such as Wireless Bluetooth, Radio Frequency Identification, Wireless-Fidelity, embedded sensor, IoT has moved out from its beginning stage and it is actually on the edge of changing the present fixed inter-net into a well featured upcoming Internet. Currently there are almost nine billion inter-connected gadgets and it is estimated to touch almost fifty billion gadgets by 2020.<br><br>
+
+There is incorporation of mobile technology into MSEB automation system due to the rapidly advancing mobile communication technology and the decrease in costs. We propose a system that collects the energy consumption from residential as well as corporate zones and send it directly to the central server where processing is done on that data for preparation of bills. AMR system can be divided into wire AMR system and wireless AMR system according to communication medium used. In existing system for collection of energy consumption data is that the representatives of MSEB monthly comes and visit every residential , take the snap shot and corporate and manually reads the consumption data from the meter. This collected data is recorded on a piece of paper along with a snap shot of the meter and finally submitted to the local MSEB office. There after the official’s read the snap shot and meter readings and then gives it to the local software for bill calculations and generation of bill. We as a consumer then make the payment for the received bill. This process is so much hectic process. Man made mistakes can be countless. Human resources wasted and many other problems do occur. We finally thought of building a system that will do the above process automatically.<br><br>
+
+Electricity theft has emerged as a serious problem in power sectors especially in the developing countries. A huge amount of revenue is lost due to electricity theft. In some countries this is so severe that governments are incurring losses instead of revenue. In some cases government has to provide subsidies to the power sector to maintain a reasonable price of electricity. The financial loss results in shortage of funds for investments to expand the existing power capacity and as a result governments are failing to satisfy the ever increasing demand of electricity. In some cases this problem has become so extreme that the affected power systems are near bankrupt. Power theft is a concerned issue even in the most efficient power systems like in USA and moderately efficient system like in Malaysia. However, in developing and under developed countries the practice of power theft is so common that it is often kept out of discussion. Electricity theft includes tampering meters to show a low meter reading, stealing electricity bypassing a meter, billing irregularities and unpaid bills. Billing irregularities comprise inaccurate meter reading taken by bribed service man and intentional fixing of the bill by office staffs in exchange of illicit payments from the consumer.<br><br>
+
+However, these technical approaches can be effectively implemented only if proper communication is ensured between the central control station and the appropriate test points. Recently, prepaid energy meters based on GSM network has been proposed. These meters incorporate the facility of prepaid metering system and remote load control. This prepaid metering system can be further matured to address the problem of electricity theft. In this paper, we have proposed a GSM based prepaid energy metering system which deals with different aspects of electricity theft. The proposed system prevents irregularities of billing, reluctance of consumers to pay bills in time, meter tampering and bypassing.</p>
+</div> <!--end content box 1-->
+
+<!--start content box2-->
+<div class="content2">
+<h2 id="literature-survey">2. Literature Survey</h2>
+<hr>
+<h4>2.1 Paper 1</h4>
+<p class="part1-para">The Existing domestic Energy meter reading systems universally exist many problems, such as difficulty in construction, too narrow bandwidth, too low rate, poor real time, not two way communication quickly etc. To solve above problems, this paper uses the wireless technology for Automatic Meter Reading system. A proposed method provides the communication between the Electricity Board section and the consumer section using Internet of things (IOT) for transmitting the customer’s electricity consumption and bill information that is calculated using ARM7 microcontroller [1]. The power fluctuations are monitored using the voltage sensor and current sensor are fed to the microcontroller which indicates it to the Electricity Board. Depending on the power generation, the house hold devices are controlled automatically. From Electricity Board section the information regarding the bill amount and payment are communicated to the consumer via Global System for Mobile communication [4]. The power and billing information is continuously transmitted by the use of Internet of Things and monitored by the Electricity Board section. Whenever there is power theft identified can be sent from the Electricity Board section to cut the supply to the customer.</p>
+
+<h4>2.2 Paper2 </h4>
+<p class="part1-para">Power utilities in different countries especially in the developing ones are incurring huge losses due to electricity theft. This paper proposes a prepaid energy metering system to control electricity theft. In this system a smart energy meter is installed in every consumer unit and a server is maintained at the service provider side. Both the meter and the server are equipped with GSM module which facilitates bidirectional communication between the two ends using the existing GSM infrastructure. Consumers can easily recharge their energy meter by sending a PIN number hidden in a scratch card to the server using SMS. This paper presents some measures to control meter bypassing and tampering. The bidirectional GSM communication using SMS ensures the effectiveness of these measures. Pilferage of electricity can be substantially reduced by incorporating the proposed measures along with the prepaid metering scheme. Legal actions against dishonest consumers can also be taken in this system.</p>
+
+<h4>2.3 Internet Of Things </h4>
+<p class="part1-para">The Internet of Things is a novel paradigm shift in IT arena. The phrase “Internet of Things” which is also shortly well-known as IOT is coined from the two words i.e. the first word is “Internet” and the second word is “Things”. The Internet is a global system of interconnected computer networks that use the standard Internet protocol suite (TCP/IP) to serve billions of users worldwide. It is a network of networks that consists of millions of private, public, academic, business, and government networks, of local to global scope, that are linked by a broad array of electronic, wireless and optical networking technologies. Today more than 100 countries are linked into exchanges of data, news and opinions through Internet. According to Internet World Statistics, as of December 31, 2011 there was an estimated 2, 267, 233, 742.<br><br>
+
+Internet users worldwide (Accessed data dated on 06/06/2013: from the Universal Resource Location ( http://www.webopedia.com/TERM/ I/Internet.html). This signifies 32.7% of the world’s total population is using Internet. Even Internet is going into space through C is CO’s Internet Routing in Space (IRIS) program in the coming fourth years (Accessed on
+10/05/2012: (http://www.cisco.com/web/strategy/ government/space-routing.html). While coming to the Things that can be any object or person which can be distinguishable by the real world. Everyday objects include not only electronic devices we encounter and use daily and technologically advanced products such as equipment and gadgets, but “things” that we do not do normally think of as electronic at all such as food, clothing; and furniture; materials, parts and equipment, merchandise and specialized items; landmarks, monuments and works of art and all the miscellany of commerce, culture and sophistication.<br><br>
+
+That means here things can be both living things like person, animals cow, calf, dog, pigeons, rabbit etc., plants mango tree, jasmine, banyan and so on and non- living things like chair, fridge, tube light, curtain, plate etc. any home appliances or industry apparatus. So at this point, things are real objects in this physical or material world.</p>
+
+<h4>2.4 Definition </h4>
+<p class="part1-para">There is no unique definition available for Internet of Things that is acceptable by the world community of users. In fact, there are many different groups including academicians, researchers, practitioners, innovators, developers and corporate people that have defined the term, although its initial use has been attributed to Kevin Ashton, an expert on digital innovation. What all of the definitions have in common is the idea that the first version of the Internet was about data created by people, while the next version is about data created by things.<br><br>
+
+The best definition for the Internet of Things would be: “An open and comprehensive network of intelligent objects that have the capacity to auto-organize, share information, data and resources, reacting and acting in face of situations and changes in the environment” Internet of Things is maturing and continues to be the latest, most hyped concept in the IT world. Over the last decade the term Internet of Things (IOT) has attracted attention by projecting the vision of a global infrastructure of networked physical objects, enabling anytime, anyplace connectivity for anything and not only for any one. The Internet of Things can also be considered as a global network which allows the communication between human- to-human, human-to-things and things-to -things, which is anything in the world by providing unique identity to each and every object. IOT describes a world where just about anything can be connected and communicates in an intelligent fashion that ever before.<br><br>
+
+Most of us think about “being connected” in terms of electronic devices such as servers, computers, tablets, telephones and smart phones. In what’s called the Internet of Things, sensors and actuators embedded in physical objects from roadways to pacemakers are linked through wired and wireless networks, often using the same Internet IP that connects the Internet. These networks churn out huge volumes of data that flow to computers for analysis. When objects can both sense the environment and communicate, they become tools for understanding complexity and responding to it swiftly. What’s revolutionary in all this is that these physical information systems are now beginning to be deployed, and some of them even work largely without human intervention.<br><br>
+
+The “Internet of Things” refers to the coding and networking of everyday objects and things to render them individually machine readable and traceable on the Internet. Much existing content in the Internet of Things has been created through coded RFID tags and IP addresses linked into an EPC (Electronic Product Code) network.</p>
+</div>  <!--end content box2-->
+
+<!--start button group-->
+<div>
+<a href="main-project-part2.html" class="button">Next &raquo;</a>
+</div>  <!--end of button group-->
+</div>  <!--end of main container-->
+
+<!--start footer-->
+<div id="footer"> 
+<p class="part1-footer-para">&copy; 2018 My Portfolio. All Rights Reserved.<br>
+Designed By</p>
+<h3>Nirmal Chandra Kunal</h3>
+</div> <!--end footer-->
+
+
+
+<script src="JSCODE/projectcode.js">
+
+ </script>
+ 
+</body>
+</html>

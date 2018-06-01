@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="CSS/project-style.css">
+
+</head>
+<body>
+
+<!--start header-->
+<div id="header" style="background-image:url(image/bg.jpg)">
+<h1>IOT Based Smart Meter</h1>
+<span style="cursor:pointer;" class="menu" onclick="openNav()"> &#9776; menu</span>
+</div>
+<!--end header-->
+
+<!--start navbar-->
+<div class="navbar" id="myNav">
+<a href="index.html" class="btn active">Home <i class="fas fa-home"></i></a>
+<a href="javascript:void(0)" class="btn">Education <i class="fas fa-graduation-cap"></i></a>
+<div class="dropdown btn">
+<button class="dropbtn">Project
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="main-project-part1.html" class="btn">Main-Project</a>
+<a href="mini-project.html" class="btn">Mini-Project</a>
+<a href="index.html" class="btn">IT-Project</a>
+</div>
+</div>
+<a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
+
+<a href="signup.html">Sign-Up <i class="fas fa-user-plus"></i>
+</a>
+<a href="login.html">Login <i class="fas fa-sign-in-alt"></i>
+</a>
+<span style="font-size:30px;cursor:pointer;color:white;" class="menu2" onclick="openNav()"> &#9776; menu</span>
+</div>
+<!--end navbar-->
+
+<!--start sidenav-->
+<div id="myNav1" class="overlay">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="main-project-part1.html#intro">Introduction</a>
+    <a href="main-project-part1.html#literature-survey">Literature Survey</a>
+    <a href="main-project-part2.html#problem-statement">Problem Statement</a>
+    <a href="main-project-part2.html#Methodology">Methodology</a>
+    <a href="#circuit-diagram">Circuit Diagram</a>
+	<a href="#hardware-software">Hardware & Software Interface</a>
+	<a href="#cost">Costing</a>
+	<a href="#result">Result</a>
+	<a href="#conclusion">Conclusion</a>
+	<a href="#future">Future Scope</a>
+	<a href="#refer">Reference</a>
+  </div>
+</div>  <!--end sidenav-->
+
+<!--start main-container-->
+<div class="main-container">
+
+<!--start content box 1-->
+<div class="content">
+<h2 class="part3-header" id="circuit-diagram">5. CIRCUIT DIAGRAM</h2>
+<hr>
+<img src="image/ckt-diagram.jpg" class="img-project" width="1340" height="1230">
+</div>  <!--end content box 1-->
+
+<!--start content box2-->
+<div class="content2">
+<h2 class="part3-header" id="hardware-software">6. HARDWARE AND SOFTWARE INTERFACE</h2>
+<hr>
+<h4>6.1 Hardware Interface</h4>
+<ol class="hardware">
+  <li>Stepdown transformer(230:0:12)</li>
+  <li>Bridge rectifier</li>
+  <li>Voltage regulator(7805)</li>
+  <li>Resistor- 5x10k, 470 ohm * 5</li>
+  <li>Capacitors-2 22pf, a 10uf and 100uf</li>
+  <li>Diodes (1N4007)*4</li>
+  <li>npn transistors*4</li>
+  <li>12Mhz crystal oscillator</li>
+  <li>Pic microcontroller(18f4520)</li>
+  <li>LDR</li>
+  <li>RF-ID Reader</li>
+  <li>Analog Meter</li>
+  <li>Wi-Fi Modem</li>
+  <li>16*2 LCD</li>
+  <li>Relay & Relay Driver</li>
+</ol>
+<h5 class="part3-header5">6.1.1 Stepdown transformer</h5>
+<p class="part3-para">A transformer is an electrical device that transfers electrical energy between two or more circuits through electromagnetic induction. 
+Electromagnetic induction produces an electromotive force within a conductor which is exposed to time varying magnetic fields. 
+Transformers are used to increase or decrease the alternating voltages in electric power applications. 
+</p>
+<img src="image/step-down.jpg" class="img-project" width="1300" height="678">
+<p class="part3-para"><mark style="background-color: lightgreen"><b>Want to know more about Step down transformer & Electromagnetic induction then click on the link below.</b></mark></p>
+<ul class="useful-links">
+  <b><li><a href="https://www.electronicshub.org/step-down-transformer/" target="_blank">electronics hub</a></li>
+  <li><a href="https://www.electrical4u.com/step-down-transformers/" target="_blank">electrical4u</a></li>
+  <li><a href="https://www.electroschematics.com/4355/step-down-transformer/" target="_blank">Electro-schematics</a></li>
+  <li><a href="https://www.electronics-tutorials.ws/electromagnetism/electromagnetic-induction.html" target="_blank">Electronic-tutorials</a></li>
+  <li><a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-14/electromagnetic-induction/" target="_blank">allAboutCircuits</a></li>
+  <li><a href="https://www.techopedia.com/definition/19997/electromagnetic-induction" target="_blank">techopedia</a></li></b>
+</ul>
+<br>
+
+<h5 class="part3-header5">6.1.2 Bridge Rectifier</h5>
+<p class="part3-para">A diode bridge is an arrangement of four (or more) diodes in a bridge circuit configuration that provides the same polarity of output for either polarity of input. A bridge rectifier provides full-wave rectification from a two-wire AC input, resulting in lower cost and weight as compared to a rectifier with a 3-wire input from a transformer with a center- tapped secondary winding.</p>
+<img src="image/bridge.jpg" class="img-project center" width="571" height="355">
+<p class="part3-para"><mark style="background-color: lightgreen"><b>Want to know more about Step down transformer & Electromagnetic induction then click on the link below.</b></mark></p>
+<ul class="useful-links">
+  <b><li><a href="http://www.physics-and-radio-electronics.com/electronic-devices-and-circuits/rectifier/bridgerectifier.html" target="_blank">physics&radio-electronics</a></li>
+  <li><a href="https://www.electronics-tutorials.ws/diode/diode_6.html" target="_blank">electronics-tutorials</a></li>
+  <li><a href="https://www.elprocus.com/bridge-rectifier-basics-application/" target="_blank">elprocus</a></li></b>
+</ul>
+<br>
+
+<h5 class="part3-header5">6.1.3 Regulated power supply</h5>
+<p class="part3-para">A regulated power supply is very much essential for several electronic devices due to the semiconductor material employed in them have a fixed rate of current as well as voltage. The device may get damaged if there is any deviation from the fixed rate. The AC power supply gets converted into constant DC by this circuit. By the help of a voltage regulator DC, unregulated output will be fixed to a constant voltage. The circuit is made up of linear voltage regulator 7805 along with capacitors and resistors with bridge rectifier made up from diodes. From giving an to unchanging voltage supply building confident that output reaches uninterrupted to the appliance, the diodes along with capacitors handle elevated efficient signal conveyed.</p>
+<img src="image/regulated-power-supply.jpg" class="img-project" width="712" height="164">
+<br>
+
+<h4>6.2 Software Requirement</h4>
+<table class="soft">
+ <tr>
+    <th>#</th>
+	<th>Software</th>
+	<th>Version</th>
+ </tr>
+ <tr>
+    <td>1.</td> 
+	<td>Programming</td>
+	<td>Embedded C language</td>
+</tr>
+  <tr>
+     <td>2.</td>
+     <td>Orcad capture</td>
+     <td>------</td>
+  </tr>
+ <tr>
+    <td>3.</td>
+    <td>Express pcb</td>
+    <td>------</td>
+</tr>
+<tr>
+    <td>4.</td>
+    <td>Socket test</td>
+    <td>3.0.0</td>
+</tr>
+<tr>
+    <td>5.</td>
+    <td>TP-LINK wireless configuration utility</td>
+    <td>------</td>
+</tr>	
+</table>
+<br>
+
+<h2 class="part3-header" id="cost">7. Costing</h2>
+<hr>
+<table class="costing">
+ <tr>
+    <th>#</th>
+	<th>Component</th>
+	<th>No of component</th>
+	<th>Specification</th>
+	<th>Cost in rupees</th>
+ </tr>
+ <tr>
+    <td>1.</td> 
+	<td>Transformer</td>
+	<td>1</td>
+	<td>12V, 0.5A</td>
+	<td>150</td>
+</tr>
+  <tr>
+     <td>2.</td>
+     <td>Diode</td>
+     <td>8</td>
+	 <td>1N4007</td>
+	 <td>16</td>
+  </tr>
+ <tr>
+    <td>3.</td>
+    <td>Resister</td>
+    <td>8</td>
+	<td>-</td>
+	<td>8</td>
+</tr>
+<tr>
+    <td>4.</td>
+    <td>Capacitor</td>
+    <td>2</td>
+	<td>100uf,16V</td>
+	<td>6</td>
+</tr>
+<tr>
+    <td>5.</td>
+    <td>Capacitor</td>
+    <td>1</td>
+	<td>1000uf, 25v</td>
+	<td>10</td>
+</tr>
+<tr>
+    <td>6.</td>
+	<td>LED</td>
+	<td>3</td>
+	<td>-</td>
+	<td>3</td>
+</tr>
+<tr>
+    <td>7.</td>
+    <td>Preset</td>
+    <td>1</td>
+    <td>-</td>
+    <td>6</td>
+</tr>
+<tr>
+    <td>8.</td>
+    <td>Reset Switch</td>
+    <td>1</td>
+    <td>2 pin</td>
+    <td>2</td>
+</tr>
+<tr>
+    <td>9.</td>
+    <td>16x2 LCD</td>
+    <td>1</td>
+    <td>-</td>
+    <td>130</td>
+</tr>
+<tr>
+    <td>10.</td>
+    <td>Relay</td>
+    <td>2</td>
+    <td>12 v</td>
+    <td>30</td>
+</tr>
+<tr>
+    <td>11.</td>
+    <td>Transistor</td>
+    <td>1</td>
+    <td>BC547</td>
+    <td>2</td>
+</tr>
+<tr>
+    <td>12.</td>
+    <td>Microcontroller</td>
+    <td>1</td>
+    <td>PIC18F452</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>13.</td>
+    <td>Crystal</td>
+    <td>1</td>
+    <td>-</td>
+    <td>8</td>
+</tr>
+<tr>
+    <td>14.</td>
+    <td>Wi-Fi</td>
+    <td>1</td>
+    <td>ESP-01</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>15.</td>
+    <td>RF ID Reader</td>
+    <td>1</td>
+    <td>EM-18</td>
+    <td>550</td>
+</tr>
+<tr>
+    <td>16.</td>
+    <td>RF ID Tag</td>
+    <td>1</td>
+    <td>-</td>
+    <td>20</td>
+</tr>
+<tr>
+    <td>17.</td>
+    <td>Connecting Wires</td>
+    <td>-</td>
+    <td>-</td>
+    <td>20</td>
+</tr>
+<tr>
+    <td>18.</td>
+    <td>PCB</td>
+    <td>-</td>
+    <td>-</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>19.</td>
+    <td>Analog Meter</td>
+    <td>1</td>
+    <td>-</td>
+    <td>400</td>
+</tr>
+<tr>
+    <th>20</th>
+    <th>Total</th>
+    <th>-</th>
+    <th>-</th>
+    <th>2311</th>
+</tr>
+</table>
+<br>
+
+<h2 class="part3-header" id="result">8. Result</h2>
+<hr>
+<h4>8.1 The Project Has Achieved Following Results</h4>
+<ul class="last-result">
+  <li>Ease of accessing information for consumer from energy meter through IoT.</li>
+</ul>
+<br>
+<figure class="figure-caption">
+<img src="image/result1.1.jpg" class="img-project" width="600" height="423">  
+<figcaption>Fig.8.1.1 server for the system.</figcaption>
+</figure>
+<br><br>
+
+<ul class="last-result">
+  <li>Theft detection at consumer end in real time.</li>
+</ul>
+<br>
+<figure class="figure-caption">
+<img src="image/result2.1.jpg" class="img-project" width="600" height="287">  
+<figcaption>Fig.8.1.2 Theft Detection on LCD.</figcaption>
+</figure> 
+<br><br>
+
+<ul class="last-result">
+  <li>LCD displays energy consumption units.</li>
+</ul>
+<br>
+<figure class="figure-caption">
+<img src="image/result3.1.jpg" class="img-project" width="650" height="364">  
+<figcaption>Fig.8.1.3 Power consumption on LCD</figcaption>
+</figure>
+<br><br>
+
+<ul class="last-result">
+  <li>Disconnection of service from remote server.</li>
+</ul>
+<br>
+<figure class="figure-caption">
+<img src="image/result4.1.jpg" class="img-project" width="700" height="459">  
+<figcaption>Fig. 8.1.4 panel of the system</figcaption>
+</figure>
+<br>
+
+<h2 class="part3-header" id="conclusion">9. Conclusion</h2>
+<hr>
+<p class="part3-para">In the era of smart city advancement, this project is concentrated on the connectivity & networking factor of the IOT. In this project, an energy consumption calculation based on the counting of calibration pulses is designed and implemented using PIC18F452 MCU in embedded system domain. In the proposed work, IOT based meter reading system is designed to continuously monitor the meter reading and service provider can disconnect the power source whenever the customer does not pay the monthly bill and also it eliminates the human involvement, delivers effective meter reading, prevent the billing mistake.<br>
+The users can be aware of their electricity consumption. The human work of collecting readings by visiting every home at the end of every month can be avoided by generating Electricity bills automatically. Theft of electricity can be avoided by tamper proof energy meters. The errors in the system can be identified quickly.
+</p>
+<br>
+
+<h2 class="part3-header" id="future">10. FUTURE SCOPE OF THE PROPOSED SYSTEM</h2>
+<hr>
+<p class="part3-para">Future enhancement in the present system, IOT energy meter consumption is accessed using Wi-Fi and it will help consumers to avoid unwanted use of electricity. The performance of the system can be enhanced by connecting all household electrical appliances to IOT. So, in future following objectives can be achieved to save power and avoid thefts:-
+<ul class="future-scope">
+  <li>We can make an IOT system where a user can monitor energy consumption and pay the bill Online.</li>
+  <li>We can make a system where a user can receive SMS, when he/she crosses threshold of electricity usage slab.</li>
+  <li>We can make a system which can send SMS to the concerned meter reading man of that area when theft detected at consumer end.</li>
+</ul>  
+</p>
+
+<h2 class="part3-header" id="refer">11. REFERENCES</h2>
+<hr>
+<ol class="reference">
+  <li>Landi, C.; Dipt. di Ing. dell''Inf., Seconda Univ. di Napoli, Aversa, Italy ; Merola, P. ; Ianniello, G, “ARM-based energy management system using smart meter and Web server”, IEEE Instrumentation and Measurement Technology ConferenceBinjiang, pp.1 – 5, May 2011.</li><br>
+  <li>1Gobhinath.S, 2Gunasundari.N, 3Gowthami.P 1Asst. Professor, Dept of EEE, Sri Krishna College of Engg & Tech., E-mail: gobhinaths@skcet.ac.in 2, 3 UG Scholars, Dept of EEE, Sri Krishna College of Engg & Tech., International Research Journal of Engineering and Technology (IRJET) e-ISSN: 2395 -0056 , p-ISSN: 2395-0072,Volume: 03 Issue: 04 | Apr-2016 www.irjet.net</li><br>
+  <li>International Conference on Computing and Control Engineering (ICCCE 2012), 12 &13 April, 2012. Dr.T. Vigneswaran, M. Srikarthik and S. Altamash.</li><br>
+  <li>Poonam Borle, Ankitha Saswadhar, Deepali Hiwarkar, Rupali S Kali, “Automatic Meter Reading for Electricity”,International Journal of Advanced Research in Electrical, Electronics and Instrumentation Engineering, Vol. 2, no. 3,pp. 982-987, March 2013.</li><br>
+  <li>International Journal of Computer Applications (0975 – 8887) Volume 133 – No.8, January 2016.</li><br>
+  <li>International Journal of Innovative Research in Science, Engineering and Technology Vol. 2, Issue 4, April 2013, ISSN: 2319-8753</li><br>
+  <li><a href="https://en.wikipedia.org/wiki/Internet_of_things">Internet_of_things</a></li>
+</ol>
+<br> 
+</div>  <!--end content box2-->
+
+<!--start button group-->
+<div>
+<a href="main-project-part2.html" class="button" style="float:left">&laquo; Previous</a>
+</div> <!--end of button group-->
+
+</div>  <!--closing of main-container-->
+
+<!--start footer-->
+<div id="footer"> 
+<p>&copy; 2018 My Portfolio. All Rights Reserved.<br>
+Designed By<br></p>
+<h3 class="part3-header3">Nirmal Chandra Kunal</h3>
+</div> <!--end footer-->
+
+<script src="JSCODE/projectcode.js">
+
+ </script>
+ 
+</body>
+</html>

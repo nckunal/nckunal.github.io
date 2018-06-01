@@ -1,0 +1,414 @@
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color:lightgrey;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*============================Navbar Section=======================*/
+.navbar {
+background-color:#333;
+overflow:hidden;                                    /*to make dropdown-menu visible*/
+font-family: Arial, Helvetica, sans-serif;
+z-index:10000;
+}
+
+.navbar a {
+text-decoration:none;
+color: #f2f2f2;
+text-align:center;
+font-size:16px;
+float:left;
+padding:14px 16px;
+}
+
+.active, .navbar a:hover, .dropdown:hover, .dropbtn:hover {
+    background-color:#DC3E1C;
+    color: black;
+}
+
+.dropdown {
+float:left;
+overflow:hidden;       /*this property make contact us link on proper place*/
+}
+
+.dropdown .dropbtn {
+cursor:pointer;
+font-size:16px;
+border:none;
+outline:none;
+color:white;
+padding:14px 16px;        /*same as navbar a */
+background-color:inherit;
+font-family:inherit;
+margin:0;
+}
+
+.dropdown-content {
+ display:none;
+ position:absolute;                               /*this will put the dropdown content out of the navbar*/
+ background-color:#f9f9f9;
+ min-width:160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);   /* property to make the dropdown menu look like a "card".*/ 
+ z-index:1;                                     /*We also use z-index to place the dropdown in front of other elements.*/
+}
+
+.dropdown-content a {
+float:none;
+color:black;
+text-align:left;
+padding: 12px 16px;
+ text-decoration: none;
+ display:block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .icon {
+    display: none;
+    font-size: 13px;
+}
+/*===============End Navbar================*/
+
+
+
+
+/*===============Form Section==============*/
+.main-form-container {
+  padding-top: 40px;
+  max-width: 600px;
+  margin:auto;
+ }
+
+form {
+border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.loginbtn {
+    background-color: white;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid #008CBA;
+    cursor: pointer;
+    width: 100%;
+}
+
+.loginbtn:hover {
+    opacity: 0.8;
+    background-color: #008CBA;
+    color: white;
+}
+
+.cancelbtn {
+    width: auto;  
+    padding: 10px 18px;
+    background-color: white;
+    color: black; 
+    border: 2px solid #f44336;
+    cursor: pointer;
+}
+
+.cancelbtn:hover{
+	background-color: #f44336;
+    color: white;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 14px;
+}
+
+p {
+  padding:5px;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+/*=============End Form Section====================*/
+
+
+/*==============Make Navbar Responsive=================*/
+@media only screen and (max-width: 800px) {
+       .navbar a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+    .navbar a.icon {
+        display:block;
+        float:right;
+    }
+    .overlay a {
+        font-size:18px;
+    }
+    .menu2 {
+         display:none;
+    }
+    .menu {
+         display:block;
+         color: #000;
+         background-color: transparent;
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+    .navbar.responsive {
+      position: relative;
+    }
+    .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align:left;
+    }
+    .navbar.responsive .dropdown {
+      float: none;
+    }
+    .navbar.responsive .dropdown-content {
+      position: relative;
+    }
+    .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    }
+    }
+
+/*==============For extra small device like nokia================*/
+ @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+    .login-para{
+        font-size: 15px;
+    }
+}   
+
+/*=============For 600 PX device example nexus7====================*/
+@media only screen and (width: 600px){
+    .navbar a{
+        font-size: 35px;
+    }
+    .navbar .icon {
+        font-size: 28px;
+    }
+    .dropdown .dropbtn{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    label {
+        font-size: 30px;
+    }
+    input {
+        font-size: 25px;
+    }
+    .loginbtn {
+        font-size: 25px;
+    }
+    .checkbox{
+        font-size: 30px;
+    }
+    .cancelbtn{
+        font-size: 25px;
+    }
+    .psw {
+        font-size: 26px;
+    }
+    .login-para{
+        font-size: 25px;
+    }
+
+}
+
+/*=============For 800 PX device example nexus10,====================*/
+@media only screen and (width: 800px){
+    .navbar a{
+        font-size: 35px;
+    }
+    .navbar .icon {
+        font-size: 28px;
+    }
+    .dropdown .dropbtn{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 45px;
+    }
+    label {
+        font-size: 35px;
+    }
+    input {
+        font-size: 30px;
+    }
+    .loginbtn {
+        font-size: 30px;
+    }
+    .checkbox{
+        font-size: 35px;
+    }
+    .cancelbtn{
+        font-size: 30px;
+    }
+    .psw {
+        font-size: 30px;
+    }
+    .login-para{
+        font-size: 28px;
+    }
+    
+}
+
+/*FOR 480PX DEVICE==============*/
+@media only screen and (width: 480px){
+    .navbar a{
+        font-size: 30px;
+    }
+    .navbar .icon {
+        font-size: 25px;
+    }
+    .dropdown .dropbtn{
+        font-size: 30px;
+    }
+    .psw{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 38px;
+    }
+    label {
+        font-size: 30px;
+    }
+    input {
+        font-size: 22px;
+    }
+   .loginbtn {
+        font-size: 32px;
+    }
+    .cancelbtn{
+        font-size: 32px;
+    }
+    .login-para{
+        font-size: 24px;
+    }
+}
+
+/*FOR 768PX DEVICE==============*/
+@media only screen and (width: 768px){
+    .navbar a{
+        font-size: 30px;
+    }
+    .navbar .icon {
+        font-size: 25px;
+    }
+    .dropdown .dropbtn{
+        font-size: 30px;
+    }
+    .psw{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 38px;
+    }
+    label {
+        font-size: 30px;
+    }
+    input {
+        font-size: 22px;
+    }
+   .loginbtn {
+        font-size: 32px;
+    }
+    .cancelbtn{
+        font-size: 32px;
+    }
+    .login-para{
+        font-size: 24px;
+    }
+}
+
+/*FOR 411PX DEVICE==============*/
+@media only screen and (width: 411px){
+    .loginbtn {
+        font-size: 20px;
+    }
+    .cancelbtn{
+        font-size: 20px;
+    }
+}
+
+/*FOR 414PX DEVICE==============*/
+@media only screen and (width: 414px){
+    label {
+        font-size: 25px;
+    }
+    input {
+        font-size: 18px;
+    }
+    .loginbtn {
+        font-size: 20px;
+    }
+    .cancelbtn{
+        font-size: 20px;
+    }
+    .login-para{
+        font-size: 18px;
+    }
+}
+
+/*FOR 375PX DEVICE==============*/
+@media only screen and (width: 375px){
+    label {
+        font-size: 20px;
+    }
+    input {
+        font-size: 16px;
+    }
+    .loginbtn {
+        font-size: 20px;
+    }
+    .cancelbtn{
+        font-size: 20px;
+    }
+    .login-para{
+        font-size: 18px;
+    }
+    .psw{
+        font-size: 18px;
+    }
+}
+

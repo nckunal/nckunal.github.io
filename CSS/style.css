@@ -1,0 +1,2079 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+:root {
+	font-size: 16px;
+	}
+
+body {
+	background-color: #ccccff;
+	/*color: #67727A;*/
+	font-family: 'Alegreya', sans-serif;
+	margin: 0;
+    
+
+}
+
+/*================Start SideNav Section========================*/
+
+
+/*=================The Overlay (background)=====================*/
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);                            /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9);            /* Black w/opacity */
+    overflow-x: hidden;                          /* Disable horizontal scroll */
+    transition: 0.2s;                    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+
+/*==========Position the content inside the overlay============= */
+.overlay-content{
+    position: relative;
+    top: 25%;                                     /* 25% from the top */
+    width: 100%;                                  /* 100% width */
+    text-align: center;                         /* Centered text/links */
+    margin-top: 30px;                /* 30px top margin to avoid conflict with the close button on smaller screens */
+
+}
+.overlay a {
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    color: #F5F5F5;
+    display: block;                                      /* Display block instead of inline */
+    transition: 0.2s;                                    
+}
+ .overlay-content .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 35px;
+	color: #F5F5F5;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    outline: none;                                   
+    transition: 0.2s;                                    
+}
+
+.dropdown-content {
+	display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 30px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    /*--right: 5px;*/
+	font-size: 36px;
+    margin-left: 200px;
+}
+
+
+
+
+/*===========Main Class==============*/
+.main {
+	 padding: 0px 10px;
+} 
+
+#main {
+    transition: margin-left .3s;
+    padding: 16px;
+}/*=======End==========*/
+
+/*==========Header Section==============*/
+h1 {
+	padding-top: 25px;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px white;
+	text-align:justify;
+	/*font-family:"century gothic" , "gill sans" , Arial , sans serif;*/
+	font-family: "Playfair Display", serif;
+	color:#f9f9f9;
+	font-size: 4rem;
+	position: relative;
+    top: 10%;
+    -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+    transform:translateY(-50%);
+	}
+
+
+header {
+	width: 100%;
+    height: auto;
+    /*background-color:skyblue;*/
+}
+
+#header-inner {
+	 max-width: 1200px;
+	 margin: 0 auto;
+	 height: 200px;
+}
+
+.menu {
+	display: none;
+}
+
+.navbar {
+     overflow:visible;                                    
+     font-family: Arial, Helvetica, sans-serif;
+     background-color:#333;
+     float: right;
+     clear: both;
+     position: absolute;
+     top: 21.5px;
+     right: 30px;
+}
+.navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.8vw 0.9vw;
+    text-decoration: none;
+    font-size: 1rem;
+ }
+
+.navbar ul li {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 150%;
+	display:inline-block;
+	float: left;
+	padding: 0.75vw;
+	top: 0;
+}
+.nav-dropdown {
+     float: right;
+     display: inline-block;      
+}
+
+.nav-caret {
+    float: right;
+    padding-right: 10px;
+	font-size: 1.1rem;
+
+}
+.nav-dropdown .nav-dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 16.5px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.nav-dropdown-content {
+    display:none;
+    position:absolute;
+    background-color:#f9f9f9;                                       
+    
+    box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);           
+    z-index:1;                                              
+}
+
+.nav-dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.active, .navbar a:hover, .nav-dropdown:hover, .nav-dropbtn:hover, .nav-dropdown-content a:hover {
+   background-color: #6495ED;
+  color: black;
+}
+.nav-dropdown:hover .nav-dropdown-content {
+    display: inline-block;
+}
+/*==============End OF Header Section===========*/
+
+
+
+/*==============About Section=============*/
+.about {
+	background-color:#9999ff;
+	padding:10px;
+	border-radius:5px;
+}
+
+h2 {
+	font-size:2.5rem;
+	word-break: break-all;
+	/*font-family:"century gothic" , "gill sans" , Arial , sans serif;*/
+	font-family: "Playfair Display", serif;
+	color:#454545;
+}
+.image-text{
+    float:left;
+    margin-right:1vw;
+    clear:both;
+}
+.about-para {
+	color: #F5F5F5;
+	font-weight: 500;
+	font-size: 1.4rem;
+	font-family:"century gothic" , "gill sans" , Arial , sans serif;
+}
+/*================End About Section======================*/
+
+
+
+/*=========================Tech Section===========================*/
+.tech {
+	margin-top:10vh;
+}
+ul {
+	list-style-type: none;
+}
+ul li {
+	display:inline;
+	font-size: 6.5rem;
+}
+ul li a {
+	color:#355ba6;
+	text-decoration: none;
+	padding: 1.4vw;
+	margin-right: 1.5vw;
+}
+/*====================End Tech Section======================*/
+
+
+
+/*==================Project Section===========*/
+
+.project {
+	margin-top:8vh;
+	width: 100%;
+}
+h3 {
+	color: #696969;
+	font-size: 2rem;
+	background-color:#9999ff;
+}
+
+.container1 > div {
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  color: #F5F5F5;
+}
+.container2 > div {
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  color: #F5F5F5;
+}
+
+.myFont p {
+	font-size: 20px;
+}
+.container1 > div:nth-child(1n) {
+  background-color: #9999ff;	
+}
+
+.container1 > div:nth-child(2n) {
+  background-color: #9999ff;
+}
+
+.container2 > div:nth-child(1n) {
+  background-color: #9999ff;
+}
+.container2 > div:nth-child(2n) {
+  background-color: #9999ff;
+}
+
+.container1 {
+  border: 5px solid #FFEFAA;
+  display: flex;
+  justify-content: space-around;
+}
+.container2 {
+  border: 5px solid #FFEFAA;
+  display: flex;
+  justify-content: space-around;
+ }
+/*====================End Project Section======================*/
+
+
+
+/*====================Footer Section===========================*/
+.footer {
+	background-color: #333;
+	height: 25vh;
+}
+.social {
+	text-align: right;
+
+}
+.social i  {
+	font-size: 2.5rem;
+	color: black;
+	padding: 2px;
+	margin-right: 8px;
+}
+.social i:hover {
+	color: white;
+}
+.social h4 {
+     font-size: 1.5rem;
+     margin-right: 8px;
+     color:#FFEFAA;
+}
+.copy p {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+/*=======================End Footer Section================*/
+
+
+/*=====================Media Queries======================*/
+
+/*=====================For Extra Small Device===================*/
+@media only screen and (max-width: 250px){
+     :root {
+		font-size:4.5px;
+	}
+	
+.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 20px;
+}
+#main {
+	
+    padding: 10px;
+}
+	.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 7rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:10px;
+	    right:15px;
+	    font-size: 4rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -30rem;
+	}
+	h2 {
+		font-size: 5rem;
+	}
+	.image-text {
+		width: 50vw;
+		height: 25vh;
+	}
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 2.5rem;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 3rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 5rem;
+	padding: 2vw;
+   }
+    .tech-img {
+    	width:40px;
+    	height: 40px;
+    }
+    .project {
+    	margin-top: 3rem;
+    }
+    .container1 {
+    	flex-wrap: wrap;
+    }
+    .container2 {
+    	flex-wrap: wrap;
+    }
+    .project-para1 p {
+        display: none;
+    }
+    .project-para2 p {
+        display: none;
+    }
+    .image-text1{
+		width: 70vw;
+		height:30vh;
+		margin-left: auto;
+		
+	}
+	.image-text2 {
+    	width: 62vw;
+    	height: 38vh;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+          background-color: #ccccff;	
+}
+
+.container1 > div:nth-child(2n) {
+          background-color: #ccccff;
+}
+
+.container2 > div:nth-child(1n) {
+        background-color: #ccccff;
+}
+.container2 > div:nth-child(2n) {
+       background-color: #ccccff;
+}
+h3 {
+	color: #696969;
+	font-size: 3rem;
+	background-color:#ccccff;
+}
+    .social i  {
+	font-size: 4rem;
+	color: black;
+	padding: 2px;
+}
+.social h4 {
+     font-size: 4rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 700;
+}
+}
+
+/*=====================For Small Device===================*/
+@media only screen and (min-device-width : 251px) and (max-device-width : 319px){
+	:root {
+		font-size:6px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 22px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 36px;
+ }
+#main {
+   padding: 10px;
+}
+.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 5rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:4px;
+	    right:15px;
+	    font-size: 3rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -23rem;
+	}
+	h2 {
+		font-size: 4.1rem;
+	}
+	.image-text {
+		width: 45vw;
+		height: 28vh;
+	}
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 2rem;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 3rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 5rem;
+	padding: 2vw;
+   }
+    .tech-img {
+    	width:30px;
+    	height: 30px;
+    }
+    .project {
+    	margin-top: 3rem;
+    }
+    .container1 {
+    	flex-wrap: wrap;
+    }
+    .container2 {
+    	flex-wrap: wrap;
+    }
+    .project-para1 p {
+        display: none;
+    }
+    .project-para2 p {
+        display: none;
+    }
+    .image-text1{
+		width: 73vw;
+		height:30vh;
+		margin-left: auto;
+		
+	}
+	.image-text2 {
+    	width: 65vw;
+    	height: 38vh;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+          background-color: #ccccff;	
+}
+
+.container1 > div:nth-child(2n) {
+          background-color: #ccccff;
+}
+
+.container2 > div:nth-child(1n) {
+        background-color: #ccccff;
+}
+.container2 > div:nth-child(2n) {
+       background-color: #ccccff;
+}
+h3 {
+	color: #696969;
+	font-size: 3rem;
+	background-color:#ccccff;
+}
+    .social i  {
+	font-size: 4rem;
+	color: black;
+	padding: 3px;
+	margin-right: 9px;
+}
+.social h4 {
+     font-size: 3rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 700;
+}
+}
+
+/*=====================For Medium Device===================*/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 440px)  {
+      :root {
+		font-size:8px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 22px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 36px;
+ }
+#main {
+	padding: 10px;
+}
+.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 4.2rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:26px;
+	    right:10px;
+	    font-size: 3rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -16.5rem;
+	}
+	h2 {
+		font-size: 3.5rem;
+	}
+	.image-text {
+		width: auto;
+		height: auto;
+	}
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 2rem;
+		font-weight: 500;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 2rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 4.5rem;
+	padding: 3vw;
+   }
+    .tech-img {
+    	width:40px;
+    	height: 40px;
+    }
+    .project {
+    	margin-top: 3rem;
+    }
+    .container1 {
+    	flex-wrap: wrap;
+    }
+    .container2 {
+    	flex-wrap: wrap;
+    }
+    
+    .project-para1 p {
+    	color: SlateBlue;
+    }
+    .project-para2 p {
+    	color: SlateBlue;
+    }
+    .image-text1{
+		width: 75vw;
+		height:33vh;
+		margin-left: auto;
+		
+	}
+	.image-text2 {
+    	width: 67vw;
+    	height: auto;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+          background-color: #ccccff;	
+}
+
+.container1 > div:nth-child(2n) {
+          background-color: #ccccff;
+}
+
+.container2 > div:nth-child(1n) {
+        background-color: #ccccff;
+}
+.container2 > div:nth-child(2n) {
+       background-color: #ccccff;
+}
+h3 {
+	color: #696969;
+	font-size: 2.5rem;
+	background-color:#ccccff;
+}
+    .social i  {
+	font-size: 4rem;
+	color: black;
+	padding: 4px;
+	margin-right: 10px;
+}
+.social h4 {
+     font-size: 2.5rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 2.1rem;
+	font-weight: 700;
+    }
+}
+
+/*=====================For medium SmartPhone Device===================*/
+
+@media only screen and (min-device-width : 441px) and (max-device-width : 650px) {
+	:root {
+		font-size:9px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 22px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 36px;
+ }
+#main {
+	padding: 10px;
+}
+.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 4rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:26px;
+	    right:10px;
+	    font-size: 2.5rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -15rem;
+	}
+	h2 {
+		font-size: 3rem;
+	}
+	.image-text {
+		width: auto;
+		height: auto;
+	}
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 1.8rem;
+		font-weight: 500;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 3rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 5.5rem;
+	padding: 3.5vw;
+   }
+    .tech-img {
+    	width:50px;
+    	height: 50px;
+    }
+    .project {
+    	margin-top: 3rem;
+    }
+    .container1 {
+    	flex-wrap: wrap;
+    }
+    .container2 {
+    	flex-wrap: wrap;
+    }
+    
+    .project-para1 p {
+    	color: SlateBlue;
+    	font-size: 2rem;
+    }
+    .project-para2 p {
+    	color: SlateBlue;
+    	font-size: 2rem;
+    }
+    .image-text1{
+		width: 60vw;
+		height:auto;
+		margin-left: auto;
+		
+	}
+	.image-text2 {
+    	width: auto;
+    	height: 63vh;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+          background-color: #ccccff;	
+}
+
+.container1 > div:nth-child(2n) {
+          background-color: #ccccff;
+}
+
+.container2 > div:nth-child(1n) {
+        background-color: #ccccff;
+}
+.container2 > div:nth-child(2n) {
+       background-color: #ccccff;
+}
+h3 {
+	color: #696969;
+	font-size: 2.5rem;
+	background-color:#ccccff;
+}
+    .social i  {
+	font-size: 4rem;
+	color: black;
+	padding: 4px;
+	margin-right: 25px;
+}
+.social h4 {
+     font-size: 2.5rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+    }
+}
+
+/*=====================For large smartphone Device===================*/
+@media only screen and (min-device-width : 651px) and (max-device-width : 768px) {
+	:root {
+		font-size:9px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 25px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 36px;
+ }
+#main {
+	
+    padding: 10px;
+}
+.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 5.2rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:26px;
+	    right:10px;
+	    font-size: 3rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -14rem;
+	}
+	h2 {
+		font-size: 3.2rem;
+	}
+	.image-text {
+		width: auto;
+		height: auto;
+		margin-bottom: 10px;
+	}
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 2rem;
+		font-weight: 500;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 4rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 5.8rem;
+	padding: 4.2vw;
+   }
+    .tech-img {
+    	width:55px;
+    	height: 55px;
+    }
+    .project {
+    	margin-top: 3rem;
+    }
+    .project-para1 p {
+    	color: #F5F5F5;
+    	font-size: 2rem;
+    }
+    .project-para2 p {
+    	color: #F5F5F5;
+    	font-size: 2rem;
+
+    }
+    .image-text1{
+		width: 50vw;
+		height:auto;
+		margin-left: auto;
+		
+	}
+	.image-text2 {
+    	width: auto;
+    	height: auto;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+  background-color: #9999ff;	
+}
+
+.container1 > div:nth-child(2n) {
+  background-color: #9999ff;
+}
+
+.container2 > div:nth-child(1n) {
+  background-color: #9999ff;
+}
+.container2 > div:nth-child(2n) {
+  background-color: #9999ff;
+}
+h3 {
+	color: #696969;
+	font-size: 2.5rem;
+	background-color:#9999ff;
+}
+.social i  {
+	font-size: 4rem;
+	color: black;
+	padding: 6px;
+	margin-right: 40px;
+}
+.social h4 {
+     font-size: 3rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+    }
+}
+
+/*=====================For iPads (portrait and landscape)=====================*/
+@media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
+	:root {
+		font-size:10px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 28px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 36px;
+ }
+#main {
+	padding: 10px;
+}
+.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 5.2rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:26px;
+	    right:10px;
+	    font-size: 3rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -13rem;
+	}
+	h2 {
+		font-size: 3.2rem;
+	}
+	.image-text {
+		width: auto;
+		height: auto;
+		margin-bottom: 28px;
+	}
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 2rem;
+		font-weight: 500;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 4rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 6.5rem;
+	padding: 4.6vw;
+   }
+    .tech-img {
+    	width:50px;
+    	height: 50px;
+    }
+    .project {
+    	margin-top: 2.5rem;
+    }
+    .project-para1 p {
+    	color: #F5F5F5;
+    	font-size: 2rem;
+    }
+    .project-para2 p {
+    	color: #F5F5F5;
+    	font-size: 2rem;
+    	
+    }
+    .image-text1{
+		width: auto;
+		height:auto;
+		margin-left: auto;
+		
+	}
+	.image-text2 {
+    	width: auto;
+    	height:auto;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+  background-color: #9999ff;	
+}
+
+.container1 > div:nth-child(2n) {
+  background-color: #9999ff;
+}
+
+.container2 > div:nth-child(1n) {
+  background-color: #9999ff;
+}
+.container2 > div:nth-child(2n) {
+  background-color: #9999ff;
+}
+h3 {
+	color: #696969;
+	font-size: 2.5rem;
+	background-color:#9999ff;
+}
+    .social i  {
+	font-size: 4rem;
+	color: black;
+	padding: 5px;
+	margin-right: 40px;
+}
+.social h4 {
+     font-size: 2.5rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 700;
+    }
+}
+
+/*=====================Desktop And Laptop=======================*/
+@media only screen and (min-device-width : 1025px) and (max-device-width : 1250px) {
+	:root {
+		font-size:11px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 28px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 36px;
+ }
+#main {
+	
+    padding: 10px;
+}
+.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 5.2rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:26px;
+	    right:10px;
+	    font-size: 3rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -11rem;
+	}
+	h2 {
+		font-size: 3.2rem;
+	}
+	.image-text {
+		width: auto;
+		height: auto;
+	}
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 2rem;
+		font-weight: 500;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 3.5rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 7rem;
+	padding: 4.8vw;
+   }
+    .tech-img {
+    	width:62px;
+    	height: 62px;
+    }
+    .project {
+    	margin-top: 2.5rem;
+    }
+    .project-para1 p {
+    	color: #F5F5F5;
+    	font-size: 1.8rem;
+    }
+    .project-para2 p {
+    	color: #F5F5F5;
+    	font-size: 1.8rem;
+    	
+    }
+    .image-text1{
+		width: auto;
+		height:auto;
+		margin-left: auto;
+		
+	}
+	.image-text2 {
+    	width: auto;
+    	height: 63vh;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+  background-color: #9999ff;	
+}
+
+.container1 > div:nth-child(2n) {
+  background-color: #9999ff;
+}
+
+.container2 > div:nth-child(1n) {
+  background-color: #9999ff;
+}
+.container2 > div:nth-child(2n) {
+  background-color: #9999ff;
+}
+h3 {
+	color: #696969;
+	font-size: 2.5rem;
+	background-color:#9999ff;
+}
+    .social i  {
+	font-size: 3.5rem;
+	color: black;
+	padding: 3px;
+	margin-right: 30px;
+}
+.social h4 {
+     font-size: 2.2rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 700;
+    }
+}
+
+/*======================For Larger Device=====================*/
+
+@media only screen and (min-device-width : 1251px) and (max-device-width : 1440px) {
+   :root {
+	font-size: 16px;
+	}
+	h1 {
+		margin-left: -20px;
+		font-size: 4rem;
+	}
+   .about {
+		margin-top: -5rem;
+	}
+	.img-large {
+		display: none;
+	}
+	.clearfix {
+    overflow: auto;
+}
+.tech {
+		margin-top: 2rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 5.5rem;
+	padding: 0.3vw;
+   }
+   .tech-img {
+    	width:75px;
+    	height: 75px;
+    }
+    .project {
+    	margin-top: 2rem;
+    }
+    .image-text1{
+		width: auto;
+		height:auto;
+		margin-left: auto;
+	}
+	.image-text2 {
+    	width: auto;
+    	height: 63vh;
+    	margin-left: auto;
+    }
+   .footer {
+	background-color: #333;
+	height: 25vh;
+   }
+.social {
+	text-align: right;
+}
+.social i  {
+	font-size: 2.3rem;
+	color: black;
+	padding: 2px;
+	margin-right: 8px;
+}
+.social i:hover {
+	color: white;
+}
+.social h4 {
+     font-size: 1.5rem;
+     margin-right: 8px;
+     color:#FFEFAA;
+}
+.copy p {
+	text-align: center;
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+.copy p:hover {
+	color: #fff;
+}
+}
+
+
+/*===================For Television==========================*/
+@media only screen and (min-device-width : 1441px) and (max-device-width : 1600px) {
+	:root {
+	font-size: 18px;
+	}
+	h1 {
+		margin-left: -100px;
+		font-size: 3.6rem;
+	}
+	.navbar {
+     overflow:visible;                                    
+     font-family: Arial, Helvetica, sans-serif;
+     background-color:#333;
+     float: right;
+     clear: both;
+     position: absolute;
+     top: 21.5px;
+     right: 30px;
+}
+.navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.8vw 0.9vw;
+    text-decoration: none;
+    font-size: 1.3rem;
+ }
+
+.navbar ul li {
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 170%;
+	display:inline-block;
+	float: left;
+	padding: 0.8vw;
+	top: 0;
+}
+.nav-dropdown {
+     float: right;
+     display: inline-block;      
+}
+
+.nav-caret {
+    float: right;
+    padding-right: 1rem;
+    margin-left: 0.5rem;
+	font-size: 1.4rem;
+
+}
+.nav-dropdown .nav-dropbtn {
+    font-size: 1.5rem;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 16.5px 17px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.nav-dropdown-content {
+    display:none;
+    position:absolute;
+    background-color:#f9f9f9;                                       
+    /*min-width:100px;*/
+    box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);           
+    z-index:1;                                              
+}
+
+.nav-dropdown-content a {
+    float: none;
+    color: black;
+    padding: 13px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.active, .navbar a:hover, .nav-dropdown:hover, .nav-dropbtn:hover, .nav-dropdown-content a:hover {
+   background-color: #6495ED;
+  color: black;
+}
+.nav-dropdown:hover .nav-dropdown-content {
+    display: inline-block;
+}
+   .about {
+		margin-top: -5rem;
+	}
+	.about-para {
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+	.image-text{
+      display: none;
+    }
+    .img-large {
+    	float:left;
+        margin-right:1vw;
+         clear:both;
+		width: 170px;
+		height:220px;
+		margin-bottom: 40px;
+	}
+	.clearfix {
+    overflow: auto;
+}
+  .tech {
+  	margin-top: 3rem;
+  }
+	.tech ul li {
+	display:inline;
+	font-size: 5rem;
+	padding: 0.3vw;
+   }
+   .tech-img {
+    	width:75px;
+    	height: 75px;
+    }
+    .project-para1 p {
+    	
+    	font-size: 1.3rem;
+    }
+    .project-para2 p {
+    	
+    	font-size: 1.3rem;
+    }
+    .image-text1{
+		width: auto;
+		height:auto;
+		margin-left: auto;
+	}
+	.image-text2 {
+    	width: auto;
+    	height: 63vh;
+    	margin-left: auto;
+    }
+   .footer {
+	background-color: #333;
+	height: 25vh;
+   }
+.social {
+	text-align: right;
+}
+.social i  {
+	font-size: 2.3rem;
+	color: black;
+	padding: 2px;
+	margin-right: 8px;
+}
+.social i:hover {
+	color: #fff;
+}
+.social h4 {
+     font-size: 1.5rem;
+     margin-right: 8px;
+     color:#FFEFAA;
+}
+.copy p {
+	text-align: center;
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+.copy p:hover {
+	color: #fff;
+}
+}
+
+/*===================For Television==========================*/
+@media only screen and (min-device-width : 1601px){
+	:root {
+		font-size:12px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 40px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 36px;
+ }
+#main {
+	padding: 10px;
+}
+h1 {
+       font-size: 7rem;
+       margin-left: -180px;
+	}
+.menu {
+		display: block;
+		position: absolute;
+		top:26px;
+	    right:10px;
+	    font-size: 3rem;
+	    color: #6495ED;
+	}
+.navbar {
+		display: none;
+	}
+	.about {
+		margin-top: -8rem;
+	}
+	h2 {
+		font-size: 5rem;
+	}
+    .about-para {
+		font-size: 3rem;
+		font-weight: 500;
+	}
+	.image-text{
+      display: none;
+    }
+    .img-large {
+    	float:left;
+        margin-right:1vw;
+         clear:both;
+		width: 170px;
+		height:220px;
+		margin-bottom: 60px;
+	}
+	.clearfix {
+    overflow: auto;
+}
+.tech {
+		margin-top: 3.5rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 7rem;
+	padding: 1.6vw;
+   }
+    .tech-img {
+    	width:70px;
+    	height: 70px;
+    }
+    .project {
+    	margin-top: 2.5rem;
+    }
+    .project-para1 p {
+    	color: #F5F5F5;
+    	font-size: 2rem;
+    }
+    .project-para2 p {
+    	color: #F5F5F5;
+    	font-size: 2rem;
+    	
+    }
+    h3 {
+	color: #696969;
+	font-size: 3rem;
+	background-color:#9999ff;
+}
+    .social i  {
+	font-size: 4rem;
+	color: black;
+	padding: 3px;
+	margin-right: 30px;
+}
+.social h4 {
+     font-size: 3rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 550;
+    }
+}
+
+/*===================For Landscape Mode========================*/
+@media only screen and (min-width : 300px) and (max-width: 1000px) and (orientation: landscape) {
+	.footer {
+    	height: 100px;
+    }
+	.social i  {
+	font-size: 20px;
+	color: black;
+	padding: 1px;
+	margin-right: 8px;
+}
+.social i:hover {
+	color: #fff;
+}
+.social h4 {
+     font-size: 15px;
+     margin-right: 8px;
+     color:#FFEFAA;
+}
+    .copy p {
+    	text-align: center;
+	    font-size: 18px;
+	    font-weight: 700;
+    }
+}
+
+/*============Landscape mode for Iphone4===============*/
+@media only screen and (width : 480px) and (height: 320px) and (orientation: landscape){
+	.footer {
+    	height: auto;
+    }
+}
+
+
+/*=============For 600 PX device example nexus7====================*/
+@media only screen and (width: 600px){
+:root {
+		font-size:9px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 40px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 40px;
+ }
+
+#main {
+	padding: 10px;
+}
+.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 6.5rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:18px;
+	    right:10px;
+	    font-size: 4.5rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -14rem;
+	}
+	h2 {
+		font-size: 5rem;
+	}
+	.image-text {
+		width: 40vw;
+		height: auto;
+    }
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 3.2rem;
+		font-weight: 500;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 3rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 6.5rem;
+	padding: 3.5vw;
+   }
+    .tech-img {
+    	width:60px;
+    	height: 60px;
+    }
+    .project {
+    	margin-top: 3rem;
+    }
+    .container1 {
+    	flex-wrap: wrap;
+    }
+    .container2 {
+    	flex-wrap: wrap;
+    }
+    
+    .project-para1 p {
+    	color: SlateBlue;
+    	font-size: 3.5rem;
+    }
+    .project-para2 p {
+    	color: SlateBlue;
+    	font-size: 3.5rem;
+    }
+    
+    .image-text1{
+		width: 70vw;
+		height:auto;
+		margin-left: auto;
+	}
+	.image-text2 {
+    	width: auto;
+    	height: 63vh;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+          background-color: #ccccff;	
+}
+
+    .container1 > div:nth-child(2n) {
+          background-color: #ccccff;
+}
+
+    .container2 > div:nth-child(1n) {
+        background-color: #ccccff;
+}
+    .container2 > div:nth-child(2n) {
+       background-color: #ccccff;
+}
+h3 {
+	color: #696969;
+	font-size: 3.5rem;
+	background-color:#ccccff;
+}
+    .social i  {
+	font-size: 5rem;
+	color: black;
+	padding: 4px;
+	margin-right: 25px;
+}
+.social h4 {
+     font-size: 3rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 700;
+    }
+}
+
+/*==============For Kindle fire 800px wide===================*/
+@media only screen and (width: 800px){
+	:root {
+		font-size:10px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 50px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 50px;
+ }
+#main {
+	padding: 10px;
+}
+.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 7.5rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:9px;
+	    right:10px;
+	    font-size: 5rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -11rem;
+	}
+	h2 {
+		font-size: 6rem;
+	}
+	.image-text {
+		width: 30vw;
+		height: auto;
+		margin-bottom: 250px;
+	}
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 3.1rem;
+		font-weight: 500;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 4rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 7rem;
+	padding: 4.6vw;
+   }
+    .tech-img {
+    	width:70px;
+    	height: 70px;
+    }
+    .project {
+    	margin-top: 3rem;
+    }
+    .project-para1 p {
+    	color: #F5F5F5;
+    	font-size: 3rem;
+    }
+    .project-para2 p {
+    	color: #F5F5F5;
+    	font-size: 3rem;
+    }
+    h3 {
+	color: #696969;
+	font-size: 3.5rem;
+	background-color:#9999ff;
+}
+    .image-text1{
+		width: auto;
+		height:auto;
+		margin-left: auto;
+	}
+	.image-text2 {
+    	width: auto;
+    	height:auto;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+  background-color: #9999ff;	
+}
+
+.container1 > div:nth-child(2n) {
+  background-color: #9999ff;
+}
+
+.container2 > div:nth-child(1n) {
+  background-color: #9999ff;
+}
+.container2 > div:nth-child(2n) {
+  background-color: #9999ff;
+}
+
+    .social i  {
+	font-size: 6rem;
+	color: black;
+	padding: 5px;
+	margin-right: 40px;
+}
+.social h4 {
+     font-size: 4rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 5rem;
+	font-weight: 700;
+    }
+}
+
+/*==============For 480px wide device example nokia n9===================*/
+@media only screen and (width: 480px){
+	:root {
+		font-size:9px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 40px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 50px;
+ }
+#main {
+	padding: 10px;
+}
+.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 5rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:9px;
+	    right:10px;
+	    font-size: 5rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -11rem;
+	}
+	h2 {
+		font-size: 4rem;
+	}
+	.image-text {
+		width: 35vw;
+		height: auto;
+	}
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 2.8rem;
+		font-weight: 500;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 4rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 5rem;
+	padding: 3vw;
+   }
+    .tech-img {
+    	width:45px;
+    	height: 45px;
+    }
+    .project {
+    	margin-top: 3rem;
+    }
+    .container1 {
+    	flex-wrap: wrap;
+    }
+    .container2 {
+    	flex-wrap: wrap;
+    }
+    
+    .project-para1 p {
+    	color: SlateBlue;
+    	font-size: 3rem;
+    }
+    .project-para2 p {
+    	color: SlateBlue;
+    	font-size: 3rem;
+    }
+    .image-text1{
+		width: auto;
+		height:auto;
+		margin-left: auto;
+	}
+	.image-text2 {
+    	width: auto;
+    	height: 63vh;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+          background-color: #ccccff;	
+    }
+.container1 > div:nth-child(2n) {
+          background-color: #ccccff;
+}
+
+.container2 > div:nth-child(1n) {
+        background-color: #ccccff;
+}
+.container2 > div:nth-child(2n) {
+       background-color: #ccccff;
+}
+h3 {
+	color: #696969;
+	font-size: 3.5rem;
+}
+    .social i  {
+	font-size: 3rem;
+	color: black;
+	padding: 5px;
+	margin-right: 40px;
+}
+.social h4 {
+     font-size: 4rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 4rem;
+	font-weight: 700;
+    }
+}
+
+/*================For IPAD=============================*/
+@media only screen and (width : 768px) {
+	:root {
+		font-size:9px;
+	}
+	.overlay a, .overlay-content .dropdown-btn, .overlay-content .dropdown-btn .fa-caret-down {
+    font-size: 40px;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+	font-size: 45px;
+ }
+#main {
+	padding: 10px;
+}
+.navbar {
+		display: none;
+	}
+	h1 {
+       font-size: 5.5rem;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top:20px;
+	    right:10px;
+	    font-size: 4rem;
+	    color: #6495ED;
+	}
+	.about {
+		margin-top: -12rem;
+	}
+	h2 {
+		font-size: 4.5rem;
+	}
+	.image-text {
+		width: 30VW;
+		height: auto;
+		margin-bottom: 10px;
+	}
+	.img-large {
+		display: none;
+	}
+	.about-para {
+		font-size: 3rem;
+	}
+	.clearfix {
+    overflow: auto;
+}
+	.tech {
+		margin-top: 4rem;
+	}
+	.tech ul li {
+	display:inline;
+	font-size: 7rem;
+	padding: 4.2vw;
+   }
+    .tech-img {
+    	width:65px;
+    	height:65px;
+    }
+    .project {
+    	margin-top: 3rem;
+    }
+    .project-para1 p {
+    	color: #F5F5F5;
+    	font-size: 3rem;
+    }
+    .project-para2 p {
+    	color: #F5F5F5;
+    	font-size: 3rem;
+    }
+    .image-text1{
+		width: 50vw;
+		height:auto;
+		margin-left: auto;
+	}
+	.image-text2 {
+    	width: auto;
+    	height: auto;
+    	margin-left: auto;
+    }
+    .container1 > div:nth-child(1n) {
+         background-color: #9999ff;	
+    }
+    .container1 > div:nth-child(2n) {
+         background-color: #9999ff;
+    }
+    .container2 > div:nth-child(1n) {
+         background-color: #9999ff;
+    }
+    .container2 > div:nth-child(2n) {
+        background-color: #9999ff;
+    }
+h3 {
+	color: #696969;
+	font-size: 3.5rem;
+	background-color:#9999ff;
+}
+.social i  {
+	font-size: 6rem;
+	color: black;
+	padding: 6px;
+	margin-right: 40px;
+}
+.social h4 {
+     font-size: 5rem;
+    }
+    .copy p {
+	text-align: center;
+	font-size: 4rem;
+	font-weight: 700;
+    }
+}

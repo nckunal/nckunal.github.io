@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="CSS/project-style.css">
+
+</head>
+<body>
+
+<!--start header-->
+<div id="header" style="background-image:url(image/bg.jpg)" class="head">
+<h1>IOT Based Smart Meter</h1>
+<span style="cursor:pointer;" class="menu" onclick="openNav()"> &#9776; menu</span>
+</div>
+<!--end header-->
+
+<!--start navbar-->
+<div class="navbar" id="myNav">
+<a href="index.html" class="btn active">Home <i class="fas fa-home"></i></a>
+<a href="javascript:void(0)" class="btn">Education <i class="fas fa-graduation-cap"></i></a>
+<div class="dropdown btn">
+<button class="dropbtn">Project
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="main-project-part1.html" class="btn">Main-Project</a>
+<a href="mini-project.html" class="btn">Mini-Project</a>
+<a href="index.html" class="btn">IT-Project</a>
+</div>
+</div>
+<a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
+
+<a href="signup.html">Sign-Up <i class="fas fa-user-plus"></i>
+</a>
+<a href="login.html">Login <i class="fas fa-sign-in-alt"></i>
+</a>
+<span style="cursor:pointer;color:white;" class="menu2" onclick="openNav()"> &#9776; menu</span>
+</div>
+<!--end navbar-->
+
+<!--start sidenav-->
+<div id="myNav1" class="overlay">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="main-project-part1.html#intro">Introduction</a>
+    <a href="main-project-part1.html#literature-survey">Literature Survey</a>
+    <a href="#problem-statement">Problem Statement</a>
+    <a href="#Methodology">Methodology</a>
+    <a href="main-project-part3.html#circuit-diagram">Circuit Diagram</a>
+	  <a href="main-project-part3.html#hardware-software">Hardware & Software Interface</a>
+	  <a href="main-project-part3.html#cost">Costing</a>
+	  <a href="main-project-part3.html#result">Result</a>
+	  <a href="main-project-part3.html#conclusion">Conclusion</a>
+	  <a href="main-project-part3.html#future">Future Scope</a>
+	  <a href="main-project-part3.html#refer">Reference</a>
+  </div>
+</div>  <!--end sidenav-->
+
+<!--start main-container-->
+<div class="main-container">
+
+<!--start content box 1-->
+<div class="content">
+<h2 id="problem-statement">3. Problem Statement</h2>
+<hr>
+<h4>3.1 Problems In Existing System</h4>
+<p class="part2-para">The present system only provides feedback to the customer at the end of the month that how much power is consumed in the form of bill. The consumer has no way to track their energy usage on a more immediate basis.<br>
+The consumers are growing exponentially fast and load on power providing divisions is rapidly rising. In the existing system meter tampering can be done easily and it’s one of the major drawback for an energy crisis.
+</p>
+
+<h4>3.2 Proposed System</h4>
+<p class="part2-para">In the proposed system, consumer can do power management by knowing energy usage time to time. The Customer needs to pay the bill on schedule, if couldn’t, the electric power connectivity can be turned off autonomously from the distant host.<br>
+The system is more reliable and accurate reading values are collected from energy meters.<br>
+Live readings of the energy meter can be viewed online.<br>
+The human intensive work is avoided and all the values are maintained in the central server.
+The communication medium is secure and tampering of energy meters can be identified easily. If an error occurs in the system, the value in the central server will not be updated. Once the value updated crosses the threshold time, the server can determine that something is wrong in the system and can report the engineers in EB. Thus, identification of error becomes easier. Since the values are stored in the central database, the reports are made accessible from anywhere in the world. Also, the server is online 24x 7.
+</p>
+</div>
+<!--end content box 1-->
+
+<!--start content box2-->
+<div class="content2">
+<h2 id="Methodology">4. Methodology</h2>
+<hr>
+<h4>4.1 Block Diagram</h4>
+<img src="image/block-diagram.jpg" class="img-project" width="640" height="345">
+<br>
+
+<h4>4.2 Power Supply Design</h4>
+<p class="part2-para">This is very basic block in every electrical and electronics projects circuit, which is used for providing the required power to the microcontroller and other components in the circuit.<br><br> Generally, this power supply block consists of step-down transformer, bridge rectifier, and IC 7805 voltage regulator. Thus, the required 5V DC power supply is given to the microcontroller.</p>
+
+<img src="image/power-supply.jpg" class="img-project" width="724px" height="244px">
+
+<p class="part2-para">To get 5V regulated output we use LM7805.Output voltage of LM7805 regulator is 5V. Dropout Voltage of LM7805 is 2V,So minimum input voltage required at input of regulator to get 5V output is :- <br><br><mark>Output of LM7805 + Dropout voltage = 5+2 = 7V</mark>.<br><br> So minimum input voltage is 7V and maximum input voltage is 35V (Ref. Datasheet) for which LM7805 gives 5V regulated output.<br><br>
+<mark>V<sub>dc</sub> = Regulator output + drop across diode</mark> and <br><br> <mark>IC = 5+4 = 9V</mark> <br><br> As we increase V<sub>in</sub> for LM7805 power dissipation also increases. For LM7805 maximum power dissipation is 15W(Ref. Datasheet). In our design, Power Dissipation is:-<br><br><mark>V<sub>dc</sub> * Io = 9 *.3 = 2.7W</mark> <br><br><mark>2.7W < 15W</mark>, so it does not need heat sink.</p>
+
+<p class="part2-para"><b>Filter Design</b></br><br>
+We have,<br> <mark>C = w<sub>c</sub>RL/(2 * pi * f * RL)</mark><br><br>
+where <mark>RL=V<sub>dc</sub>/I = 9 / 0.3 = 30 ohm</mark> <br><br>
+Assume <mark>w<sub>c</sub>RL = 10</mark>; i.e. 10% voltage variation is allowed.<br><br>
+<mark>C = 10/(2 * 3.14 * 50 * 30) = 1061uF</mark><br></br>
+Select <mark>standard capacitor = 1000 uF/25V</mark><br>
+25V is selected as voltage across C should be greater than V<sub>in</sub>.</p>
+
+<p class="part2-para"><b>Bulk Decoupling capacitor:-</b></br></br>
+We connected 100 uF at output of regulator as a decoupling capacitor. It is optional.<br>When devices connected to the 5V supply heavy current from power supply, output of regulator may fall down and become unstable. <br>In such cases 100uF provides power to the devices by discharging itself to maintain 5V output constant. Value of decoupling capacitor may be <mark>> 10 uF</mark>.</p>
+
+<p class="part2-para"><b>Rectifier Design:-</b><br><br>
+Diode Selection<br>
+I(f) average = Io/2 = 300mA/2 = 150mA<br>
+Now, I<sub>m</sub> = 300mA<br>
+PIV rating = V<sub>m</sub>= pi * V<sub>c</sub>(DC)/2 = 3.14 * 9/2 = 15V<br>
+So diode with PIV rating greater then 15V is suitable. <mark>IN4007 is more than sufficient as it has PIV = 1000V</mark></p>
+
+<p class="part2-para"><b>Transformer Design:-</b><br><br>
+RMS secondary output voltage of transformer is:-<br>
+<mark>V<sub>s</sub>=(V<sub>m</sub>+ n * 1)/1.42</mark><br>
+n=1 for FWR or HWR<br>
+n=2 for BWR <br>
+But V<sub>m</sub> = V<sub>dc</sub> * pi / 2 = 14.13 = 15(approx).<br>
+So,
+V<sub>s</sub>=(15+2)/1.42<br> <mark>V<sub>s</sub> = 12V</mark><br><br>
+
+RMS current on secondary side is:-<br>
+I<sub>rms</sub> = 2 * I<sub>m</sub>/ pi = 0.191A<br>
+I<sub>rms</sub> = 0.191A<br>
+Rating of transformer = V<sub>s</sub> * I<sub>rms</sub> = 12 * 0.191 = 3.25 VA.<br>
+V<sub>1</sub> / V<sub>2</sub> = I<sub>2</sub> / I<sub>1</sub> 230 / 12 = 0.191 / I<sub>1</sub><br>
+<mark>I<sub>1</sub> = 0.01A</mark><br>
+Turn Ratio is I<sub>2</sub> / I<sub>1</sub> = N<sub>1</sub> / N<sub>2</sub><br>
+OR N<sub>1</sub> / N<sub>2</sub> = 0.191 / 0.01 = 19<br>
+So, <mark>Turn ratio is 19:1</mark><br>
+Size of Core is given by,<br>
+=Sqrt(wp/0.87) = Sqrt(230 * 0.01 / 0.87) = 1.625 sqcm.<br>
+<mark>Size of Core = 1.625sqcm</mark>.<br>
+Power On Indication:-<br>
+We know voltage drop across LED when it is in ON state is 1.8 to 2.5v<br>
+We should put a series resistor to control If value of resistor should be selected such that forward current shall not exceed If(max) = 50mA (Ref. Datasheet).<br>
+If = (5V-2.5) / 470<br>
+<mark>If = 5.31mA</mark><br>
+For greater brightness value of resistor should be increased.<br>
+3.3V Design : Use LM317 regulator.<br>
+Assume R<sub>1</sub> = 240 ohm<br> Calculate R<sub>2</sub><br>
+Uses formula V<sub>o</sub> = 1.25 * (1+R<sub>2</sub> / R<sub>1</sub>) + I<sub>adj</sub> * R<sub>2</sub><br>
+Neglect I<sub>adj</sub>.<br>
+3.3 = 1.25 * (1 + R<sub>2</sub> / 240)<br>
+R<sub>2</sub> = 390R 12V<br>
+Design : Use LM7812 and follow the same procedure.<br>
+Note : Transformer and Capacitor ratings mentioned in circuit are suitable for 5V and<br>
+3.3V design for 12V the ratings should be recalculated.<br>
+</p>
+<br>
+
+<h4>4.3 Microcontroller</h4>
+<img src="image/PIC18F452.jpg" class="img-project" width="500" height="435"> 
+<p class="part2-para">The microcontroller block can be considered as the main block of the entire circuit, as it is programmed to control all the components to perform the desired operation.<br> Here, in this project PIC18f452 microcontroller is used. The energy meter is interfaced with the microcontroller using an interfacing device or middle wire device namely Opto-isolator. Similarly, Wi-Fi modem is interfaced with PIC18f452 microcontroller using an interfacing device.</p>
+
+<p class="part2-para"><b>Function Of Microcontroller:-</b></p>
+<ul class="fun-micro">
+  <li>100,000 erase/write cycle Enhanced Flash program memory typical.</li>
+  <li>1,000,000 erase/write cycle Data EEPROM memory typical.</li>
+  <li>Flash/Data EEPROM Retention: > 40 years.</li>
+  <li>8 x 8 Single Cycle Hardware Multiplier.</li>
+  <li>Wide operating voltage range: 2.0V to 5.5V</li>
+  <li>High current sink/source 25 mA/25 mA.</li>
+  <li>One Capture/Compare/PWM (CCP) module.</li>
+  <li>Enhanced Capture/Compare/PWM (ECCP) module (40/44-pin devices only):-
+     <ol>
+	    <li>One, two or four PWM outputs.</li>
+		<li>Selectable polarity.</li>
+		<li>Programmable dead time.</li>
+		<li>Auto-Shutdown and Auto-Restart.</li>
+	 </ol>
+     </li>	 
+  <li>Enhanced Addressable USART module:-
+     <ol>
+	    <li>Supports RS-485, RS-232 and LIN 1.3</li>
+		<li>RS-232 operation using internal oscillator block (no external crystal required).</li>
+		<li>Auto-Wake-up on Start bit.</li>
+		<li>Auto-Baud detect.</li>
+	 </ol>
+	 </li>
+  <li>10-bit, up to 11-channel Analog-to-Digital Converter module (A/D), up to 100 Kbps.</li>
+  <li>Two dedicated receive buffers</li>
+  <li>Advanced error management features.</li>
+</ul>
+
+<p class="part2-para"><mark style="background-color: lightgreen"><b>Want to know more about PIC18f452 microcontroller. Below I have mentioned some Useful links. Please check that link.</b></mark></p>
+
+<ul class="useful-links">
+  <b><li><a href="http://www.futurlec.com/Microchip/PIC18F452.shtml" target="_blank">Futurlec</a></li>
+  <li><a href="http://www.microchip.com/wwwproducts/en/PIC18F452" target="_blank">Microchip</a></li>
+  <li><a href="https://www.theengineeringprojects.com/2014/10/functions-available-in-pic18f452-microcontroller.html" target="_blank">Engineering Project</a></li></b>
+</ul>
+<br>
+
+<h4>4.4 RELAY & RELAY DRIVER</h4>
+
+<img src="image/relay-driver.jpg" class="img-project center" width="249" height="264">
+<p class="part2-para">
+Relays are interfaced with microcontroller using relay driver. The loads are connected between the relays and energy meter, such that loads are given a 230V AC power supply for their operation. This 230V AC power supply is given to operate the loads until the relays are switched by the user. The microcontroller is programmed to give control commands to the relay driver such that to switch on or off the relays.</p>
+
+<p class="part2-para"><mark style="background-color: lightgreen"><b>Want to know more about Relay and Relay-driver. Below I have mentioned some Useful links. Please check that link.</b></mark></p>
+
+<ul class="useful-links">
+  <b><li><a href="http://www.explainthatstuff.com/howrelayswork.html" target="_blank">Explainthatstuff!</a></li>
+  <li><a href="https://www.techopedia.com/definition/10318/relay" target="_blank">techopedia</a></li>
+  <li><a href="http://www.galco.com/comp/prod/relay.htm" target="_blank">Galco</a></li>
+  <li><a href="http://www.edgefxkits.com/blog/relay-driver-circuit-using-uln2003-ic/" target="_blank">edgeFx</a></li>
+  <li><a href="https://www.electroschematics.com/7123/relay-driver-2/" target="_blank">electro-schematics</a></li>
+  <li><a href="https://www.elprocus.com/relay-driver-circuit-using-uln2003/" target="_blank">elprocus</a></li>
+  <li><a href="http://www.onsemi.com/PowerSolutions/parametrics.do?id=358" target="_blank">onsemi</a></li></b>
+</ul>
+<br>
+
+<h4>4.5 16*2 LCD DISPLAY</h4>
+<p class="part2-para">LCD (Liquid Crystal Display) screen is an electronic display module and find a wide range of applications. A 16x2 LCD display is very basic module and is very commonly used in various devices and circuits.<br> These modules are preferred over seven segments and other multi segment LEDs.<br> The reasons being: LCDs are <mark>economical</mark>; <mark>easily programmable</mark>; <mark>have no limitation of displaying special & even custom characters</mark> (unlike in seven segments), <mark>animations</mark> and so on.<br>
+A <b>16x2 LCD</b> means it can display 16 characters per line and there are 2 such lines. In this LCD each character is displayed in 5x7 pixel matrix.<br> This LCD has two registers, namely, <mark>Command and Data</mark>. The command register <mark>stores the command instructions given to the LCD</mark>.<br> A command is an instruction given to LCD to do a predefined task like initializing it, clearing its screen, setting the cursor position, controlling display etc. <br>The data register <mark>stores the data to be displayed on the LCD</mark>.<br> The data is the ASCII value of the character to be displayed on the LCD.
+It requires <mark>3 control lines</mark> as well as either <mark>4 or 8 I/O lines</mark> for the data bus. <br>Here we are using 8-bit mode of LCD, i.e., using 8 bit data bus.</p>
+
+<img src="image/16x2.jpg" class="img-project center" width="309" height="163">
+
+<p class="part2-para">The three control lines are referred to as <mark>EN,RS and RW</mark>.<br> These three pins are numbered 4, 5 and 6 as shown above.<br> <mark>RS</mark> is used to make the selection between data and command register. For <mark>RS=0</mark>, command register is selected and for <mark>RS=1</mark> data register is selected.<br><br>
+<mark>R/W</mark> gives you the choice between writing and reading. If <mark>R/W=1</mark> reading is enabled. If <mark>R/W=0</mark> writing is enabled.<br><br>
+<mark>Enable pins</mark> is used by the LCD to <mark>latch information presented to its data pins</mark>. When data is supplied to data pins, a high to low pulse must be applied to this pin in-order for the LCD to latch in the data present at the data pins. It maybe noted here that the pulse must be of minimum 450ns wide.<br><br>
+<mark>Pin 1</mark> (VSS) is a ground pin and it is certainly needed that this pin should be grounded for LCD to work properly.<br> <mark>VEE</mark> and <mark> VDD</mark>  are given <mark> +5V</mark>  normally. However <mark> VEE</mark>  may have a potentiometer voltage divider network to get the contrast adjusted. But <mark> VDD</mark>  is always at <mark> +5V</mark> .<br> The 8-bit data pins, D0-D7, are used to send information to the LCD or read the contents of LCD's internal register.<br><br>
+To display letters and numbers, we send <mark>ASCII code</mark> for the letters A-Z, a-z and numbers 0-9 while making RS=1.<br> We also use <mark>RS=0</mark> to check the busy flag bit to see if the LCD is ready to receive information. The busy flag is D-7 and can be read when R/W=1 and RS=0, as follows:- if R/W=1, RS=0. When <mark>D7=1</mark> (busy flag=1), the LCD is busy taking care of internal operations and will not accept any new information.<br> When <mark>D7=0</mark>, the LCD is ready to receive new information. <br>It is recommended to check the busy flag before writing any data to LCD.
+
+<img src="image/pin.jpg" class="img-project center" width="526" height="536">
+</p>
+<p class="part2-para"><mark style="background-color: lightgreen"><b>Want to know more about 16 * 2 LCD. Below I have mentioned some Useful links. Please check that link.</b></mark></p>
+
+<ul class="useful-links">
+  <b><li><a href="https://electronicsforu.com/resources/learn-electronics/16x2-lcd-pinout-diagram" target="_blank">electronicsForU</a></li>
+  <li><a href="https://www.engineersgarage.com/electronic-components/16x2-lcd-module-datasheet" target="_blank">engineers-garage</a></li>
+  <li><a href="https://components101.com/16x2-lcd-pinout-datasheet" target="_blank">components101</a></li>
+  <li><a href="https://circuitdigest.com/article/16x2-lcd-display-module-pinout-datasheet" target="_blank">circuitDigest</a></li>
+  <li><a href="https://www.winstar.com.tw/products/character-lcd-display-module/16x2-lcd.html" target="_blank">winstar</a></li></b>
+</ul>
+<br>
+
+<h4>4.6 LDR Sensor</h4>
+<p class="part2-para">An <b>LDR</b> is a component that has a (variable) resistance that changes with the light intensity that falls upon it. This allows them to be used in light sensing circuits.<br>
+They are made up of semiconductor materials having high resistance.<br> There are many <mark>different symbols</mark> used to indicate a LDR, one of the most commonly used symbol is shown in the figure below. The <mark>arrow indicates light falling on it</mark>.</p>
+<img src="image/ldr.jpg" class="img-project center" width="260" height="196">
+<p class="part2-para"><b>Working:-</b></br><br>
+A light dependent resistor works on the principle of photo conductivity. Photo conductivity is an optical phenomenon in which the materials conductivity is increased when light is absorbed by the material.<br>
+When light falls i.e. when the photons fall on the device, the electrons in the valence band of the semiconductor material are excited to the conduction band.<br> These photons in the incident light should have energy greater than the band gap of the semiconductor material to make the electrons jump from the valence band to the conduction band.<br> Hence when light having enough energy strikes on the device, more and more electrons are excited to the conduction band which results in large number of charge carriers.<br> The result of this process is more and more current starts flowing throgh the device when the circuit is closed and hence it is said that the resistance of the device has been decreased.<br> This is the <mark>most common working principle of LDR</mark>.
+</p>
+
+<p class="part2-para"><mark style="background-color: lightgreen"><b>Want to know more about LDR sensor. Below I have mentioned some Useful links. Please check that link.</b></mark></p>
+
+<ul class="useful-links">
+  <b><li><a href="https://www.kitronik.co.uk/blog/how-an-ldr-light-dependent-resistor-works/" target="_blank">kitronik</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Photoresistor" target="_blank">wikipedia</a></li>
+  <li><a href="http://www.edgefxkits.com/blog/light-dependent-resistor-ldr-with-applications/" target="_blank">edgeFx</a></li>
+  <li><a href="https://www.electrical4u.com/light-dependent-resistor-ldr-working-principle-of-ldr/" target="_blank">electrical4u</a></li></b>
+</ul>
+<br>
+
+<h4>4.7 RF ID READER</h4>
+<p class="part2-para">A scheme of Electricity billing system called "<mark>PREPAID ENERGY METER WITH TARIFF INDICATOR</mark>" can facilitate in improved cash flow management in energy utilities and can reduces problem associated with billing consumer living in isolated area and reduces deployment of manpower for taking meter readings.<br> Every consumer can recharge RFID tag assigned and recharge its meter at various ranges (i.e. Rs.50, Rs.100, Rs.200 etc.).<br>In our project we have given the name for RFID tag card smart card.<br> Consumer can check its balance in LCD attached with the module and be prepare for the next recharge in advance.<br> When a recharge coupon or we can say RFID tag come in front of RFID reader, the reader read the information from its unique RFID Tag and record into database.<br> Basically it has three component <mark>antenna, transceiver and transponder</mark>.<br> So these are components that perform the whole task.<br> When a RFID recharge tag brings near the RFID transceiver it read the code and send it to the microcontroller, microcontroller checks the code if it is ok then recharge the energy meter if not it display a message of invalid code.</p>
+
+<p class="part2-para"><mark style="background-color: lightgreen"><b>Want to know more about RF-ID reader. Below I have mentioned some Useful links. Please check that link.</b></mark></p>
+
+<ul class="useful-links">
+  <b><li><a href="https://www.techopedia.com/definition/26992/radio-frequency-identification-reader-rfid-reader" target="_blank">techopedia</a></li>
+  <li><a href="https://www.impinj.com/about-rfid/how-does-rfid-work/" target="_blank">IMPINJ</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Radio-frequency_identification" target="_blank">wikipedia</a></li></b>
+</ul>
+<br>
+
+<h4>4.8 Wi-Fi Modem</h4>
+<P class="part2-para">Wi-Fi is a technology that uses radio waves to provide network connectivity.<br> A Wi-Fi connection is established using a wireless adapter to create hotspots - areas in the vicinity of a wireless router that are connected to the network and allow users to access internet services.<br> Once configured, Wi-Fi provides wireless connectivity to your devices by emitting frequencies between <mark>2.4GHz - 5GHz</mark>, based on the amount of data on the network.</P>
+ </div> <!--end content box2-->
+
+<!--start button group-->
+<div class="btn-grp">
+<div style="float: right;">     
+    <a href="main-project-part3.html" class="next-btn">Next &raquo;</a>
+</div>
+<div>       
+    <a href="main-project-part1.html" class="previous-btn">&laquo; Previous</a>
+</div>
+</div> <!--end of button group-->
+
+</div> <!--end of main container-->
+
+<!--start footer-->
+<div id="footer"> 
+<p class="part2-footer-para">&copy; 2018 My Portfolio. All Rights Reserved.<br>
+Designed By<br></p>
+<h3>Nirmal Chandra Kunal</h3>
+</div>
+<!--end footer-->
+
+<script src="JSCODE/projectcode.js">
+
+ </script>
+ 
+</body>
+</html>

@@ -1,0 +1,812 @@
+body {
+margin:0;
+font-family: verdana, georgia, serif;
+font-size:16px;
+width:100%;
+}
+
+* {
+	box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.main-container {
+	max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar .icon {
+	font-size:13px;
+	display: none;
+}
+
+/*========================Header Section======================*/
+#header {
+  background-color:#1a1a1a;
+   padding: 40px;
+  text-align: center;
+  border:1px solid orange;
+}
+
+h1 {
+font-size: 250%;
+/*color:black;*/
+font-family:"century gothic" , "gill sans" , Arial , sans serif;
+text-align:center;
+/*text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;*/
+color: white;
+text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+
+
+/*============================Navbar Section=======================*/
+.navbar {
+background-color:#333;
+overflow:hidden;                                    /*to make dropdown-menu visible*/
+font-family: Arial, Helvetica, sans-serif;
+z-index:10000;
+}
+
+.navbar a {
+text-decoration:none;
+color: #f2f2f2;
+text-align:center;
+font-size:16px;
+float:left;
+padding:14px 16px;
+}
+
+.active, .navbar a:hover, .dropdown:hover, .dropbtn:hover {
+    background-color:#DC3E1C;
+    color: black;
+}
+
+.dropdown {
+float:left;
+overflow:hidden;       /*this property make contact us link on proper place*/
+}
+
+.dropdown .dropbtn {
+cursor:pointer;
+font-size:16px;
+border:none;
+outline:none;
+color:white;
+padding:14px 16px;        /*same as navbar a */
+background-color:inherit;
+font-family:inherit;
+margin:0;
+}
+
+.dropdown-content {
+ display:none;
+ position:absolute;                                       /*this will put the dropdown content out of the navbar*/
+ background-color:#f9f9f9;
+ min-width:160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);           /* property to make the dropdown menu look like a "card".*/ 
+ z-index:1;                                              /*We also use z-index to place the dropdown in front of other elements.*/
+}
+
+.dropdown-content a {
+float:none;
+color:black;
+text-align:left;
+padding: 12px 16px;
+ text-decoration: none;
+ display:block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*=====================Table========================*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+	line-height: 1.6;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+h2 {
+	text-align:center;
+}
+
+.center {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.figure-caption{
+	text-align: center;
+}
+
+.img-project{
+        max-width: 100%;
+        height: auto;
+}
+
+/*================Footer Section================*/
+#footer { 
+    text-align:center;
+	padding: 15px;
+    clear: both;
+	background-color:lightgrey;
+}
+
+/*==============Make Navbar Responsive=================*/
+@media only screen and (max-width: 800px) {
+       .navbar a:not(:first-child), .dropdown .dropbtn {
+		display: none;
+	}
+    .navbar a.icon {
+		display:block;
+        font-size: 15px;
+		float:right;
+	}
+    .overlay a {
+		font-size:18px;
+	}
+	
+	.overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+    .navbar.responsive {
+	  position: relative;
+	}
+	.navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align:left;
+    }
+    .navbar.responsive .dropdown {
+	  float: none;
+	}
+	.navbar.responsive .dropdown-content {
+	  position: relative;
+	}
+	.navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    }
+	}
+
+/*=====================For Extra Small Device===================*/
+@media only screen and (max-device-width: 250px) {
+	.navbar .icon {
+	font-size:16px;
+	}
+	h1 {
+		font-size: 100%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .navbar {
+    	width: 100%;
+    }
+    h2 {
+    	font-size: 15px;
+    }
+    .img-project{
+    	max-width: 100%;
+    	height: auto;
+    }
+    .content{
+    	font-size: 15px;
+    }
+    p {
+    	font-size: 11px;
+    }
+    .figure-caption{
+    	font-size: 13px;
+    }
+    .construction{
+    	font-size: 14px;
+    }
+    .locomotive{
+    	font-size: 14px;
+    }
+    h3{
+    	font-size: 14px;
+    }
+    .advantage{
+    	font-size: 14px;
+    }
+    .application{
+    	font-size: 14px;
+    }
+    .conclusion{
+    	font-size: 14px;
+    }
+    .center {
+    	width: 100%;
+    }
+    .reference {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .footer-para{
+    	font-size: 15px;
+    }
+    .mini-header3{
+    	font-size: 16px;
+    }
+}
+
+/*=====================For Small Device===================*/
+@media only screen and (min-device-width : 251px) and (max-device-width : 319px){
+	.navbar .icon {
+	font-size:16px;
+	}
+	h1 {
+		font-size: 120%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .navbar {
+    	width: 100%;
+    }
+    h2 {
+    	font-size: 16px;
+    }
+    .content{
+    	font-size: 16px;
+    }
+    .img-project{
+    	max-width: 100%;
+        height: auto;
+    }
+    p {
+    	font-size: 13px;
+    }
+    .figure-caption{
+    	font-size: 13px;
+    }
+    .construction{
+    	font-size: 14px;
+    }
+    .locomotive{
+    	font-size: 14px;
+    }
+    h3{
+    	font-size: 14px;
+    }
+    .advantage{
+    	font-size: 14px;
+    }
+    .application{
+    	font-size: 14px;
+    }
+    .conclusion{
+    	font-size: 14px;
+    }
+    .center {
+    	width: 100%;
+    }
+    .reference {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .footer-para{
+    	font-size: 15px;
+    }
+    .mini-header3{
+    	font-size: 16px;
+    }
+}
+
+/*=====================For Medium Device===================*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 440px){
+	.navbar .icon {
+	font-size:16px;
+	}
+	h1 {
+		font-size: 140%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .navbar {
+    	width: 100%;
+    }
+    h2 {
+    	font-size: 16px;
+    }
+    .content{
+    	font-size: 16px;
+    }
+    .img-project{
+    	max-width: 100%;
+    	height: auto;
+    }
+    p {
+    	font-size: 14px;
+    }
+    .figure-caption{
+    	font-size: 13px;
+    }
+    .construction{
+    	font-size: 14px;
+    }
+    .locomotive{
+    	font-size: 14px;
+    }
+    h3{
+    	font-size: 14px;
+    }
+    .advantage{
+    	font-size: 14px;
+    }
+    .application{
+    	font-size: 14px;
+    }
+    .conclusion{
+    	font-size: 14px;
+    }
+    .center {
+    	width: 100%;
+    }
+    .reference {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .footer-para{
+    	font-size: 15px;
+    }
+    .mini-header3{
+    	font-size: 16px;
+    }
+}
+
+/*=====================For medium SmartPhone Device===================*/
+
+@media only screen and (min-device-width : 441px) and (max-device-width : 650px){
+    
+	/*.navbar .icon {
+	font-size:16px;
+	}*/
+	h1 {
+		font-size: 160%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .navbar {
+    	width: 100%;
+    }
+    h2 {
+    	font-size: 18px;
+    }
+    .content{
+    	font-size: 18px;
+    }
+    p {
+    	font-size: 15px;
+    }
+    .img-project{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .figure-caption{
+    	font-size: 15px;
+    }
+    .construction{
+    	font-size: 15px;
+    }
+    .locomotive{
+    	font-size: 15px;
+    }
+    h3{
+    	font-size: 14px;
+    }
+    .advantage{
+    	font-size: 15px;
+    }
+    .application{
+    	font-size: 15px;
+    }
+    .conclusion{
+    	font-size: 15px;
+    }
+    .center {
+    	width: 100%;
+    }
+    .reference {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    .footer-para{
+    	font-size: 16px;
+    }
+    .mini-header3{
+    	font-size: 17px;
+    }
+}
+
+/*=====================For large smartphone Device===================*/
+@media only screen and (min-device-width : 651px) and (max-device-width : 767px){
+	.navbar .icon {
+	font-size:16px;
+	}
+	h1 {
+		font-size: 170%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .navbar {
+    	width: 100%;
+    }
+    .img-project{
+        max-width: 100%;
+        height: auto;
+    }
+    h2 {
+    	font-size: 18px;
+    }
+    .content{
+    	font-size: 16px;
+    }
+    p {
+    	font-size: 15px;
+    }
+    .figure-caption{
+    	font-size: 15px;
+    }
+    .construction{
+    	font-size: 15px;
+    }
+    .locomotive{
+    	font-size: 15px;
+    }
+    h3{
+    	font-size: 14px;
+    }
+    .advantage{
+    	font-size: 15px;
+    }
+    .application{
+    	font-size: 15px;
+    }
+    .conclusion{
+    	font-size: 15px;
+    }
+    .center {
+    	width: 100%;
+    }
+    .reference {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    .footer-para{
+    	font-size: 16px;
+    }
+    .mini-header3{
+    	font-size: 17px;
+    }
+}
+
+/*==============for 600 px device=======================*/
+@media only screen and (width: 600px){
+	.navbar a {
+		font-size: 22px;
+	}
+	.dropdown .dropbtn{
+        font-size: 22px;
+    }
+	.navbar .icon {
+	font-size:21px;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .navbar {
+    	width: 100%;
+    }
+	h1 {
+		font-size: 250%;
+	}
+	h2{
+		font-size: 24px;
+	}
+	h3{
+		font-size: 22px;
+	}
+	.content{
+    	font-size: 22px;
+    }
+    .img-project{
+        max-width: 100%;
+        height: auto;
+    }
+    p{
+    	font-size: 22px;
+    }
+    .center {
+    	width: 100%;
+    }
+    .construction{
+    	font-size: 22px;
+    }
+    .locomotive{
+    	font-size: 22px;
+    }
+    .figure-caption{
+    	font-size: 20px;
+    }
+    .advantage{
+    	font-size: 22px;
+    }
+    .application{
+    	font-size: 22px;
+    }
+    .conclusion{
+    	font-size: 22px;
+    }
+    .reference {
+        font-size: 22px;
+        line-height: 1.6;
+    }
+    .footer-para{
+    	font-size: 19px;
+    }
+    .mini-header3{
+    	font-size: 20px;
+    }
+}
+
+
+/*====================for 800px device=====================*/
+@media only screen and (width: 800px){
+	.navbar a {
+		font-size: 27px;
+	}
+	.dropdown .dropbtn{
+        font-size: 27px;
+    }
+	.navbar .icon {
+	font-size:25px;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .navbar {
+    	width: 100%;
+    }
+	h1 {
+		font-size: 450%;
+	}
+	h2{
+		font-size: 35px;
+	}
+	h3{
+		font-size: 28px;
+	}
+	.content{
+    	font-size: 28px;
+    }
+    .img-project{
+        max-width: 100%;
+        height: auto;
+    }
+    p{
+    	font-size: 30px;
+    }
+    .center {
+    	width: 100%;
+    }
+    .construction{
+    	font-size: 30px;
+    }
+    .locomotive{
+    	font-size: 30px;
+    }
+    .figure-caption{
+    	font-size: 32px;
+    }
+    .advantage{
+    	font-size: 30px;
+    }
+    .application{
+    	font-size: 30px;
+    }
+    .conclusion{
+    	font-size: 30px;
+    }
+    .reference {
+        font-size: 30px;
+        line-height: 1.6;
+    }
+    .footer-para{
+    	font-size: 28px;
+    }
+    .mini-header3{
+    	font-size: 25px;
+    }
+}
+
+
+/*======================for 480px device=======================*/
+@media only screen and (width: 480px){
+	.navbar a {
+		font-size: 30px;
+	}
+	.dropdown .dropbtn{
+        font-size: 30px;
+    }
+	.navbar .icon {
+	font-size:29px;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .navbar {
+    	width: 100%;
+    }
+	h1 {
+		font-size: 250%;
+	}
+	h2{
+		font-size: 30px;
+	}
+	h3{
+		font-size: 23px;
+	}
+	.content{
+    	font-size: 29px;
+    }
+    .img-project{
+        max-width: 100%;
+        height: auto;
+    }
+    p{
+    	font-size: 26px;
+    }
+    .center {
+    	width: 100%;
+    }
+    .construction{
+    	font-size: 26px;
+    }
+    .locomotive{
+    	font-size: 26px;
+    }
+    .figure-caption{
+    	font-size: 23px;
+    }
+    .advantage{
+    	font-size: 26px;
+    }
+    .application{
+    	font-size: 26px;
+    }
+    .conclusion{
+    	font-size: 26px;
+    }
+    .reference {
+        font-size: 26px;
+        line-height: 1.6;
+    }
+    .footer-para{
+    	font-size: 23px;
+    }
+    .mini-header3{
+    	font-size: 25px;
+    }
+}
+
+
+/*=====================for 768px======================*/
+@media only screen and (width: 768px){
+	.navbar a {
+		font-size: 27px;
+	}
+	.dropdown .dropbtn{
+        font-size: 27px;
+    }
+	.navbar .icon {
+	font-size:25.5px;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .navbar {
+    	width: 100%;
+    }
+	h1 {
+		font-size: 350%;
+	}
+	h2{
+		font-size: 35px;
+	}
+	h3{
+		font-size: 28px;
+	}
+	.content{
+    	font-size: 28px;
+    }
+    
+    p{
+    	font-size: 27px;
+    }
+    .center {
+    	width: 100%;
+    }
+    .construction{
+    	font-size: 27px;
+    }
+    .locomotive{
+    	font-size: 27px;
+    }
+    .figure-caption{
+    	font-size: 23px;
+    }
+    .advantage{
+    	font-size: 27px;
+    }
+    .application{
+    	font-size: 27px;
+    }
+    .conclusion{
+    	font-size: 27px;
+    }
+    .reference {
+        font-size: 27px;
+        line-height: 1.6;
+    }
+    .footer-para{
+    	font-size: 25px;
+    }
+    .mini-header3{
+    	font-size: 28px;
+    }
+}

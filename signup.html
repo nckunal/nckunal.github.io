@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="CSS/signup-form.css">
+</head>
+<body>
+
+<!--start navbar-->
+<div class="navbar" id="myNav">
+<a href="index.html" class="btn active">Home <i class="fas fa-home"></i></a>
+<a href="javascript:void(0)" class="btn">Education <i class="fas fa-graduation-cap"></i></a>
+<div class="dropdown btn">
+<button class="dropbtn">Project
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="main-project-part1.html">Main-Project</a>
+<a href="mini-project.html">Mini-Project</a>
+<a href="index.html">IT-Project</a>
+</div>
+</div>
+<a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
+
+<a href="signup.html">Sign-Up <i class="fas fa-user-plus"></i>
+</a>
+<a href="login.html">Login <i class="fas fa-sign-in-alt"></i>
+</a>
+
+</div>  <!--end navbar-->
+
+<!--Start Signup form-->
+
+<div class="main-form-container"> 
+<h2>SignUp Form</h2>
+
+<form name="myForm" action="message.html" method="post" onSubmit="return validateTextbox();">
+
+	<div class="container">
+
+		<label for="firstname"><b>First Name:</b> </label>  
+              <input type="text" id="firstname" name="firstname" placeholder="Enter Your First Name"/> <br/> <br/> 
+
+        <label for="middlename"><b>Middle Name:</b> </label>  
+              <input type="text" id="middlename" name="middlename" placeholder="Enter Your Middle Name (Optional)"/> <br/> <br/>
+
+        <label for="lastname"><b>Last Name:</b> </label>  
+              <input type="text" id="lastname" name="lastname" placeholder="Enter Your Last Name"/> <br/> <br/> 
+
+        <label for="password1"><b>Choose Your Password:</b> </label>
+              <input type="password" id="password1" name="password1" placeholder="Choose Your Password"/> <br/><br/>
+
+        <label for="password2"><b>Confirm Your Password:</b></label> 
+              <input type="password" id="password2" name="password2" placeholder="Enter Your Password Again"/><br><br>     
+
+        <label for="email"><b>Enter Your Email:</b> </label>
+              <input type="email" id="email" name="email" placeholder="Choose Your Password"/>  <br/><br/>  
+
+        <label for="username"><b>Choose Your UserName:</b> </label>
+              <input type="text" id="username" name="username" placeholder="Choose Your Password"/>  <br/><br/> 
+
+        
+
+        <label for="country"><b>Country</b></label>
+        <select id="country" name="country" required>
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+		  <option value="india">INDIA</option>
+          <option value="china">CHINA</option>
+          <option value="france">FRANCE</option>
+		  <option value="germany">GERMANY</option>
+          <option value="uae">UAE</option>
+          <option value="united kingdom">UNITED KINGDOM</option>
+		  <option value="south africa">SOUTH AFRICA</option>
+          <option value="philippines">PHILIPPINES</option>
+          <option value="other">OTHER</option>
+        </select></br></br>  
+
+        <label><input type="checkbox" name="remember" checked="checked"> Remember me</label>
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>  
+
+        
+        <button type="submit" class="signupbtn">SignUp</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+    <button type="button" onclick="window.location.href='index.html'" class="cancelbtn" href="index.html">Cancel</button>
+    </div>
+
+    <div>
+    <p class="signup-para">Already have a account?<a href="login.html" style="color:#333"><b>Click Here to Log-In</b></a>
+	</p>
+	</div> 
+
+	</form>
+    </div>
+
+<script src="JSCODE/signup-code.js"></script>
+
+</body>
+</html>

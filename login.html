@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="CSS/login-form-style.css">
+</head>
+<body>
+
+<!--start navbar-->
+<div class="navbar" id="myNav">
+<a href="index.html" class="btn active">Home <i class="fas fa-home"></i></a>
+<a href="javascript:void(0)" class="btn">Education <i class="fas fa-graduation-cap"></i></a>
+<div class="dropdown btn">
+<button class="dropbtn">Project
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="main-project-part1.html">Main-Project</a>
+<a href="mini-project.html">Mini-Project</a>
+<a href="index.html">IT-Project</a>
+</div>
+</div>
+<a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
+
+<a href="signup.html">Sign-Up <i class="fas fa-user-plus"></i>
+</a>
+<a href="login.html">Login <i class="fas fa-sign-in-alt"></i>
+</a>
+
+</div>  <!--end navbar-->
+
+
+<div class="main-form-container"> 
+<h2>Login Form</h2>
+
+<form action="message.html" method="post" onSubmit="return validateTextbox();">
+
+  
+  <div class="container">
+  <label for="loginusername"><b>Username or Email</b></label>
+   <input type="text" id="loginusername" name="loginusername" placeholder="Enter Username or Email" required><br><br>
+   
+   <label for="loginpsd"><b>Password</b></label>
+   <input type="password" id="loginpsd" name="loginpsd" placeholder="Enter Your Password" required><br><br>
+   
+   <button type="submit" class="loginbtn">Login</button><br><br>
+   <label class="checkbox">
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+  
+  <div class="container" style="background-color:#f1f1f1">
+  <button type="button" onclick="window.location.href='index.html'" class="cancelbtn">Cancel</button>
+  <span class="psw">Forgot <a href="#">password?</a></span>
+  
+  </div>
+  <div>
+    <p class="login-para">Don't have a account?<a href="signup.html" style="color:#333"><b>Click Here to Sign-Up</b></a>
+	</p>
+	</div>
+</form>
+</div>
+
+
+<script src="JSCODE/login-jscode.js"></script>
+
+</body>
+</html>

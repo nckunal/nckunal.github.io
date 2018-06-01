@@ -1,0 +1,1245 @@
+body {
+margin:0;
+font-family: verdana, georgia, serif;
+font-size:16px;
+width:100%;
+}
+
+* {
+	box-sizing: border-box;
+    line-height: 1.6;
+}
+.main-container {
+	max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.menu2 {
+	font-size: 30px;
+}
+.navbar .icon {
+	font-size:13px;
+	display: none;
+}
+/*========================Header Section======================*/
+#header {
+  background-color:#1a1a1a;
+   padding: 40px;
+  text-align: center;
+  border:1px solid orange;
+}
+
+h1 {
+font-size: 250%;
+/*color:black;*/
+font-family:"century gothic" , "gill sans" , Arial , sans serif;
+text-align:center;
+/*text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;*/
+color: white;
+ text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.menu {
+	position:absolute;
+	top:10px;
+	right:20px;
+	display:none;
+}
+
+
+
+/*============================Navbar Section=======================*/
+.navbar {
+background-color:#333;
+overflow:hidden;                                    /*to make dropdown-menu visible*/
+font-family: Arial, Helvetica, sans-serif;
+z-index:10000;
+}
+
+.navbar a {
+text-decoration:none;
+color: #f2f2f2;
+text-align:center;
+font-size:16px;
+float:left;
+padding:14px 16px;
+}
+
+.active, .navbar a:hover, .dropdown:hover, .dropbtn:hover {
+    background-color:#DC3E1C;
+    color: black;
+}
+
+.dropdown {
+float:left;
+overflow:hidden;       /*this property make contact us link on proper place*/
+}
+
+.dropdown .dropbtn {
+cursor:pointer;
+font-size:16px;
+border:none;
+outline:none;
+color:white;
+padding:14px 16px;        /*same as navbar a */
+background-color:inherit;
+font-family:inherit;
+margin:0;
+}
+
+.dropdown-content {
+ display:none;
+ position:absolute;                                       /*this will put the dropdown content out of the navbar*/
+ background-color:#f9f9f9;
+ min-width:160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);           /* property to make the dropdown menu look like a "card".*/ 
+ z-index:1;                                              /*We also use z-index to place the dropdown in front of other elements.*/
+}
+
+.dropdown-content a {
+float:none;
+color:black;
+text-align:left;
+padding: 12px 16px;
+ text-decoration: none;
+ display:block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+h2 {
+	text-align:center;
+	
+}
+.content2 {
+  padding: 16px;
+ }
+ 
+ /*===========Style the button==============*/
+ .previous-btn {
+	 background-color:#DC3E1C;
+	 border:none;
+	 color: white;
+     padding: 16px 32px;
+	 text-align: center;
+	 text-decoration: none;
+	 display: inline-block;
+     font-size: 16px;
+	 margin: 4px 2px;
+    cursor: pointer;
+	margin-right:auto;
+	clear:both;
+ }
+ .previous-btn:hover {
+	  background-color: #f44336;
+ }
+ 
+ .button {
+	 background-color:#DC3E1C;
+	 border:none;
+	 color: white;
+     padding: 16px 32px;
+	 text-align: center;
+	 text-decoration: none;
+	 display: inline-block;
+     font-size: 16px;
+	 margin: 4px 2px;
+    cursor: pointer;
+	float:right;
+	clear:both;
+ }
+ .button:hover {
+	  background-color: #f44336;
+ }
+ 
+ .next-btn {
+	 background-color:#DC3E1C;
+	 border:none;
+	 color: white;
+     padding: 16px 32px;
+	 text-align: center;
+	 text-decoration: none;
+	 display: inline-block;
+    font-size: 16px;
+	 margin: 4px 2px;
+    cursor: pointer;
+	clear:both;
+ }
+ .next-btn:hover {
+	  background-color: #f44336;
+ }
+ 
+ .btn-grp {
+	 padding-top:30px;
+ }
+
+
+
+/*====Sidenav====*/
+
+/*=====The Overlay (background)=======*/
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);                            /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9);                      /* Black w/opacity */
+    overflow-x: hidden;                                      /* Disable horizontal scroll */
+    transition: 0.5s;                    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/*==Position the content inside the overlay== */
+.overlay-content {
+    position: relative;
+    top: 25%;                                      /* 25% from the top */
+    width: 100%;                                
+    text-align: center;                          /* Centered text/links */
+    margin-top: 30px;                      /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/*==The navigation links inside the overlay==*/
+.overlay a {
+    padding: 5px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;                                      /* Display block instead of inline */
+    transition: 0.3s;                                    /* Transition effects on hover (color) */
+}
+
+/*====HOVER EFFECT=====*/
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+
+/*==Position the close button (top right corner)==*/
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/*=====================Image Slider with CSS===============*/
+* {
+	box-sizing: border-box;
+	}
+body {
+	font-family: Verdana, sans-serif; 
+	margin:0;
+	}
+	
+.mySlides {
+	display: none;
+	}
+img {
+	vertical-align: middle;
+	}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active2, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*================Main-Project2=========================*/
+.img-project {
+	max-width: 100%;
+    height: auto;
+}
+.img-project1 {
+	width: 100%;
+    height: auto;
+}
+
+.image {
+	float:left;
+    margin-right:10px;
+}
+.center {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*=====================Software Table========================*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+	line-height: 1.6;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+h2 {
+	text-align:center;
+}
+
+
+
+
+/*================Footer Section================*/
+#footer { 
+    text-align:center;
+	padding: 15px;
+    clear: both;
+	background-color:lightgrey;
+}
+
+/*=======================Media Queries=====================================*/
+
+/*==========MAKE MAIN CONTAINER 800PX===============*/
+
+
+/*==============Make Navbar Responsive=================*/
+@media only screen and (max-width: 800px) {
+       .navbar a:not(:first-child), .dropdown .dropbtn {
+		display: none;
+	}
+    .navbar a.icon {
+		display:block;
+		float:right;
+        font-size: 15px;
+	}
+    .overlay a {
+		font-size:18px;
+	}
+	.menu2 {
+		 display:none;
+	}
+	.menu {
+		 display:block;
+		 color: #000;
+		 background-color: transparent;
+	}
+	.overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+    .navbar.responsive {
+	  position: relative;
+	}
+	.navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align:left;
+    }
+    .navbar.responsive .dropdown {
+	  float: none;
+	}
+	.navbar.responsive .dropdown-content {
+	  position: relative;
+	}
+	.navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    }
+	}
+
+/*=====================For Extra Small Device===================*/
+@media only screen and (max-device-width: 250px) {
+	
+	h1 {
+		font-size: 100%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .menu {
+    	font-size: 1rem;
+    }
+    .navbar {
+    	width: 100%;
+    }
+    
+    .content h2 {
+    	font-size: 1rem;
+    }
+    p {
+    	font-size: 12px;
+    }
+    .content2 h2 {
+    	font-size: 1rem;
+    }
+    .img-project {
+    	width: 100%;
+    }
+    .center {
+    	width: 100%;
+    }
+    h4 {
+    	font-size:0.9rem;
+    }
+    .button {
+    	font-size: 12px;
+    }
+    .next-btn {
+    	font-size: 22px;
+    }
+    .previous-btn {
+    	font-size: 22px;
+    }
+    .costing {
+        display: none;
+    }
+    .hardware {
+        font-size: 12px;
+    }
+    .useful-links {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    .soft {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+    .future-scope {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+    .reference {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+
+/*=====================For Small Device===================*/
+@media only screen and (min-device-width : 251px) and (max-device-width : 319px) {
+	
+	h1 {
+		font-size: 150%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .menu {
+    	font-size: 1.3rem;
+    }
+    .navbar {
+    	width: 100%;
+    }
+    .content h2 {
+    	font-size: 1.3rem;
+    }
+    p {
+    	font-size: 12px;
+    }
+    .content2 h2 {
+    	font-size: 1.3rem;
+    }
+    .img-project {
+    	width: 100%;
+    }
+    .center {
+    	width: 100%;
+    }
+    .fun-micro {
+    	font-size: 10px;
+        line-height: 1.6;
+    }
+    .useful-links {
+    	font-size: 12px;
+        line-height: 1.6;
+    }
+    h4 {
+    	font-size:1rem;
+    }
+    .button {
+    	font-size: 13px;
+    }
+    .next-btn {
+    	font-size: 10px;
+    }
+    .previous-btn {
+    	font-size: 10px;
+    }
+    .costing {
+        display: none;
+    }
+    .hardware {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    
+    .soft {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+    .future-scope {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+    .reference {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+
+/*=====================For Medium Device===================*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 440px) {
+	
+	h1 {
+		font-size: 160%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .menu {
+    	font-size: 1.3rem;
+    }
+    .navbar {
+    	width: 100%;
+    }
+    .content h2 {
+    	font-size: 1.4rem;
+    }
+    p {
+    	font-size: 15px;
+    }
+    .content2 h2 {
+    	font-size: 1.4rem;
+    }
+    .img-project {
+    	width: 100%;
+    }
+    .center {
+    	width: 100%;
+    }
+    .fun-micro {
+    	font-size: 15px;
+        line-height: 1.6;
+    }
+    .useful-links {
+    	font-size: 15px;
+        line-height: 1.6;
+    }
+    h4 {
+    	font-size:1.1rem;
+    }
+    .button {
+    	font-size: 14px;
+    }
+    .next-btn {
+    	font-size: 14px;
+    }
+    .previous-btn {
+    	font-size: 14px;
+    }
+    .costing {
+        display: none;
+    }
+    .hardware {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .part3-para{
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .part3-header5 {
+        font-size: 15.5px;
+    }
+    .soft {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    .future-scope {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .reference {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+/*=====================For medium SmartPhone Device===================*/
+
+@media only screen and (min-device-width : 441px) and (max-device-width : 650px) {
+	
+	h1 {
+		font-size: 170%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .menu {
+    	font-size: 1.4rem;
+    }
+    .navbar {
+    	width: 100%;
+    }
+    .content h2 {
+    	font-size: 1.5rem;
+    }
+    p {
+    	font-size: 16px;
+    }
+    .img-project {
+    	width: 100%;
+    }
+    .center {
+    	width: 100%;
+    }
+    .content2 h2 {
+    	font-size: 1.5rem;
+    }
+    h4 {
+    	font-size:1.2rem;
+    }
+    .button {
+    	font-size: 15px;
+    }
+    .next-btn {
+    	font-size: 20px;
+    }
+    .previous-btn {
+    	font-size: 20px;
+    }
+    .costing {
+        /*display: none;*/
+        font-size: 11px;
+        line-height: 1.6;
+    }
+    .hardware {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    
+    .soft {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    .future-scope {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    .reference {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+
+/*=====================For large smartphone Device===================*/
+@media only screen and (min-device-width : 651px) and (max-device-width : 767px) {
+	.navbar a{
+        font-size: 16px;
+    }
+    .navbar .icon {
+        font-size: 16px;
+    }
+    .dropdown .dropbtn{
+        font-size: 16px;
+    }
+	h1 {
+		font-size: 190%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .menu {
+    	font-size: 1.5rem;
+    }
+    .navbar {
+    	width: 100%;
+    }
+    .content h2 {
+    	font-size: 1.7rem;
+    }
+    .img-project {
+    	width: 100%;
+    }
+    .center {
+    	width: 100%;
+    }
+    p {
+    	font-size: 16px;
+    }
+    .content2 h2 {
+    	font-size: 1.7rem;
+    }
+    h4 {
+    	font-size:1.2rem;
+    }
+    .button {
+    	font-size: 16px;
+    }
+    .costing {
+        /*display: none;*/
+        font-size: 11px;
+        line-height: 1.6;
+    }
+    .hardware {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    
+    .soft {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    .future-scope {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    .reference {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+
+/*=====================For iPads (portrait and landscape)=====================*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1025px) and (-webkit-min-device-pixel-ratio: 1) {
+	
+	h1 {
+		font-size: 250%;
+	}
+	.main-container {
+		width: 100%;
+	}
+	.head {
+		width: 100%;
+	}
+    .menu {
+    	font-size: 2.2rem;
+    }
+    .navbar {
+    	width: 100%;
+    }
+    
+    .content h2 {
+    	font-size: 2rem;
+    }
+    .img-project {
+    	width: 100%;
+    }
+    .center {
+    	width: 100%;
+    }
+    .fun-micro {
+    	font-size: 24px;
+        line-height: 1.6;
+    }
+    .useful-links {
+		font-size: 22px;
+        line-height: 1.6;
+	}
+    p {
+    	font-size: 24px;
+        line-height: 1.6;
+    }
+    .content2 h2 {
+    	font-size: 2rem;
+    }
+    h4 {
+    	font-size:1.5rem;
+    }
+    h5 {
+        font-size: 15px;
+    }
+    .button {
+    	font-size: 22px;
+    }
+    .next-btn {
+    	font-size: 22px;
+    }
+    .previous-btn {
+    	font-size: 22px;
+    }
+    .costing {
+        /*display: none;*/
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+    .hardware {
+        font-size: 19px;
+        line-height: 1.6;
+    }
+    .soft {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+    .future-scope {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+    .reference {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+    .part3-para{
+        font-size: 1.8rem;
+        line-height: 1.6;
+    }
+    .content .part3-header{
+        font-size: 1.8rem;
+    }
+    .content2 .part3-header {
+        font-size: 1.8rem;
+    }
+    .part3-header5{
+        font-size: 1.4rem;
+    }
+    .last-result{
+        font-size: 1.5rem;
+    }
+    figcaption{
+        font-size: 1.3rem;
+    }
+}
+/*=============For 600 PX device example nexus7====================*/
+@media only screen and (width: 600px) {
+	.navbar a{
+        font-size: 25px;
+    }
+    .navbar .icon {
+        font-size: 20px;
+    }
+    .dropdown .dropbtn{
+        font-size: 25px;
+    }
+	h1 {
+		font-size: 200%;
+	}
+	.content h2 {
+    	font-size: 2rem;
+    }
+    h4 {
+    	font-size: 1.5rem;
+    }
+	p {
+    	font-size: 24px;
+    }
+    .menu {
+    	font-size: 2rem;
+    }
+    .navbar a {
+    	font-size: 16px;
+    }
+
+    .overlay a {
+    	font-size: 30px;
+    }
+    .fun-micro {
+    	font-size: 24px;
+        line-height: 1.6;
+    }
+    .img-project {
+    	width: 100%;
+    }
+    .center {
+    	width: 100%;
+    }
+    .button {
+    	font-size: 20px;
+    }
+    .next-btn {
+    	font-size: 22px;
+    }
+    .previous-btn {
+    	font-size: 22px;
+    }
+    h3 {
+    	font-size: 25px;
+    }
+    .useful-links {
+		font-size: 22px;
+        line-height: 1.6;
+	}
+    .costing {
+        /*display: none;*/
+        font-size: 19px;
+        line-height: 1.6;
+    }
+    .hardware {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    
+    .soft {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .future-scope {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .reference {
+        font-size: 20px;
+    }
+    .part3-para{
+        font-size: 22px;
+        line-height: 1.6;
+    }
+    .content .part3-header{
+        font-size: 26px;
+    }
+    .content2 .part3-header {
+        font-size: 26px;
+    }
+    .part3-header5 {
+        font-size: 20px;
+    }
+    .last-result {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+/*==============For pixel2 and pixel2 xl devices=================*/
+@media only screen and (width: 411px) {
+	.navbar a{
+        font-size: 16px;
+    }
+    .navbar .icon {
+        font-size: 16px;
+    }
+    .dropdown .dropbtn{
+        font-size: 16px;
+    }
+	h1 {
+		font-size: 170%;
+	}
+	p {
+    	font-size: 18px;
+    }
+    .menu {
+    	font-size: 1.7rem;
+    }
+    .img-project {
+    	width: 100%;
+    }
+    .center {
+    	width: 100%;
+    }
+    .fun-micro {
+    	font-size: 18px;
+        line-height: 1.6;
+    }
+    .useful-links {
+		font-size: 18px;
+        line-height: 1.6;
+	}
+   .button {
+        font-size: 20px;
+    }
+    .hardware {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .soft {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+    .future-scope {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .reference {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .part3-para{
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .part3-header5 {
+        font-size: 15px;
+    } 
+    .content .part3-header{
+        font-size: 22px;
+    }
+    .content2 .part3-header {
+        font-size: 22px;
+    }
+
+}
+
+
+/*==============For Kindle fire 800px wide===================*/
+@media only screen and (width: 800px) {
+	
+    .navbar a {
+        font-size: 30px;
+    }
+    .navbar .icon {
+        font-size: 30px;
+    }
+    .dropdown .dropbtn{
+        font-size: 30px;
+    }
+    .overlay a{
+        font-size: 40px;
+    }
+
+     h1 {
+     	font-size: 290%;
+     }
+     .menu {
+     	font-size: 2.6rem;
+     }
+     p {
+     	font-size: 1.8rem;
+        line-height: 1.6;
+     }
+     .fun-micro {
+    	font-size: 28px;
+        line-height: 1.6;
+    }
+    .img-project {
+        width: 100%;
+    }
+    .useful-links {
+    	font-size: 26px;
+        line-height: 1.6;
+    }
+    .button {
+        font-size: 28px;
+    }
+     .next-btn {
+    	font-size: 25px;
+    }
+    .previous-btn {
+    	font-size: 25px;
+    }
+    .costing {
+        /*display: none;*/
+        font-size: 26px;
+        line-height: 1.6;
+    }
+    .hardware {
+        font-size: 25px;
+        line-height: 1.6;
+    }
+    
+    .soft {
+        font-size: 26px;
+        line-height: 1.6;
+    }
+    .future-scope {
+        font-size: 25px;
+        line-height: 1.6;
+    }
+    .reference {
+        font-size: 25px;
+        line-height: 1.6;
+    }
+    .part3-para{
+        font-size: 28px;
+        line-height: 1.6;
+    }
+    .content .part3-header{
+        font-size: 28px;
+    }
+    .content2 .part3-header {
+        font-size: 28px;
+    }
+    .part3-header5 {
+        font-size: 25px;
+    } 
+    .last-result {
+        font-size: 25px;
+        line-height: 1.6;
+    }
+    .part3-header3 {
+        font-size: 28px;
+    }
+}
+
+/*=============For 480 PX device example nokia n9====================*/
+@media only screen and (width: 480px) {
+	.navbar a{
+        font-size: 20px;
+    }
+    .navbar .icon {
+        font-size: 20px;
+    }
+    .dropdown .dropbtn{
+        font-size: 20px;
+    }
+    .img-project{
+        width: 100%;
+    }
+    .part1-para{
+    	font-size: 25px;
+    }
+    .part2-para{
+    	font-size: 25px;
+    }
+    .part1-footer-para{
+    	font-size: 20px;
+    }
+    .part2-footer-para{
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 22px;
+    }
+    .overlay a {
+        font-size: 28px;
+    }
+    .hardware {
+        font-size: 19px;
+        line-height: 1.6;
+    }
+    .part3-header5 {
+        font-size: 19px;
+    }
+    .part3-para{
+        font-size: 21px;
+        line-height: 1.6;
+    }
+    .useful-links{
+        font-size: 19px;
+        line-height: 1.6;
+    }
+    .soft {
+        line-height: 1.6;
+        font-size: 19px;
+    }
+    .costing {
+        line-height: 1.6;
+        font-size: 16px;
+    }
+    .last-result {
+        line-height: 1.6;
+        font-size: 20px;
+    }
+    .future-scope{
+        line-height: 1.6;
+        font-size: 18px;
+    }
+    .reference {
+        line-height: 1.6;
+        font-size: 20px;
+    }
+    .button{
+        font-size: 19px;
+    }
+}
+
